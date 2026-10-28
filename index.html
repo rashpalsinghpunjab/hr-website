@@ -49,7 +49,10 @@
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 88px;
+    }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -59,7 +62,7 @@
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      padding-top: 72px;
+      padding-top: 80px;
       overflow-x: hidden;
     }
 
@@ -177,11 +180,11 @@
       position: fixed;
       top: 0; left: 0; right: 0;
       z-index: 1000;
-      background: rgba(2, 6, 23, 0.95);
+      background: rgba(2, 6, 23, 0.96);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid rgba(51, 65, 85, 0.8);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
       height: 72px;
       animation: fadeInDown 0.5s ease-out;
     }
@@ -189,35 +192,37 @@
     .nav-container {
       max-width: 1280px;
       margin: 0 auto;
-      padding: 0 20px;
+      padding: 0 16px;
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 16px;
+      gap: 10px;
+      flex-wrap: nowrap;
     }
 
     .brand-block {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       cursor: pointer;
       text-decoration: none;
       transition: transform 0.2s ease;
+      flex-shrink: 0;
     }
     .brand-block:hover { transform: scale(1.02); }
 
     .brand-logo-badge {
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 9px;
       background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
       color: #020617;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 900;
-      font-size: 20px;
+      font-size: 18px;
       letter-spacing: -1px;
       box-shadow: 0 4px 12px rgba(245, 158, 11, 0.35);
       flex-shrink: 0;
@@ -233,34 +238,37 @@
     }
 
     .brand-name {
-      font-size: 17px;
+      font-size: 15px;
       font-weight: 900;
       color: #ffffff;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.4px;
       line-height: 1.2;
+      white-space: nowrap;
     }
 
     .brand-tagline {
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 700;
       color: #fbbf24;
-      letter-spacing: 0.4px;
+      letter-spacing: 0.3px;
+      white-space: nowrap;
     }
 
     .division-nav-pills {
       display: flex;
-      gap: 6px;
+      gap: 4px;
       background: #0f172a;
-      padding: 5px;
-      border-radius: 12px;
+      padding: 4px;
+      border-radius: 10px;
       border: 1px solid #334155;
+      flex-shrink: 0;
     }
 
     .div-tab-btn {
       border: none;
-      padding: 8px 16px;
-      border-radius: 8px;
-      font-size: 13px;
+      padding: 7px 13px;
+      border-radius: 7px;
+      font-size: 12.5px;
       font-weight: 800;
       cursor: pointer;
       background: transparent;
@@ -268,7 +276,7 @@
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
       display: inline-flex;
       align-items: center;
-      gap: 7px;
+      gap: 6px;
       white-space: nowrap;
     }
 
@@ -287,14 +295,15 @@
     .nav-actions {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 8px;
+      flex-shrink: 0;
     }
 
     .btn-nav-rfq {
       background: #2563eb;
       color: #ffffff;
-      padding: 8px 16px;
-      border-radius: 8px;
+      padding: 7px 13px;
+      border-radius: 7px;
       font-size: 12px;
       font-weight: 800;
       text-decoration: none;
@@ -304,6 +313,7 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      white-space: nowrap;
     }
 
     .btn-nav-rfq:hover {
@@ -315,8 +325,8 @@
     .btn-nav-wa {
       background: #22c55e;
       color: #ffffff;
-      padding: 8px 14px;
-      border-radius: 8px;
+      padding: 7px 12px;
+      border-radius: 7px;
       font-size: 12px;
       font-weight: 800;
       text-decoration: none;
@@ -324,6 +334,7 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      white-space: nowrap;
     }
 
     .btn-nav-wa:hover {
@@ -595,11 +606,10 @@
     .agro-subnav {
       background: var(--agro-primary);
       color: #ffffff;
-      padding: 14px 0;
+      padding: 12px 0;
       border-bottom: 3px solid var(--agro-accent);
-      position: sticky;
-      top: 72px;
-      z-index: 90;
+      position: relative;
+      z-index: 10;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
     }
 
@@ -894,11 +904,10 @@
     .gse-subnav {
       background: var(--gse-primary);
       color: #ffffff;
-      padding: 14px 0;
+      padding: 12px 0;
       border-bottom: 3px solid var(--gse-accent);
-      position: sticky;
-      top: 72px;
-      z-index: 90;
+      position: relative;
+      z-index: 10;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
 
@@ -1067,7 +1076,7 @@
     /* ============================================================
        RESPONSIVE BREAKPOINTS
     ============================================================ */
-    @media (max-width: 900px) {
+    @media (max-width: 980px) {
       .division-nav-pills { display: none; }
       .mobile-menu-btn { display: block; }
       
@@ -1088,20 +1097,22 @@
         width: 100%;
         justify-content: center;
         padding: 12px;
-        font-size: 15px;
+        font-size: 14px;
       }
       .gw-hero h1 { font-size: 32px; }
       .grid-2 { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 600px) {
-      body { padding-top: 72px; }
-      .gw-hero h1 { font-size: 28px; }
+      body { padding-top: 76px; }
+      .gw-hero h1 { font-size: 26px; }
       .gw-card-img { height: 220px; }
-      .rfq-box { padding: 24px; }
+      .rfq-box { padding: 20px 16px; }
       .floating-wa-btn span { display: none; }
       .floating-wa-btn { padding: 14px; }
       .form-dual-actions { flex-direction: column; }
+      .subnav-flex { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .subnav-links { width: 100%; overflow-x: auto; padding-bottom: 4px; }
     }
   </style>
 </head>
@@ -1280,7 +1291,7 @@
     <nav class="agro-subnav">
       <div class="container subnav-flex">
         <div style="display:flex; align-items:center; gap:8px;">
-          <span style="font-size:12px; font-weight:800; color:#bbf7d0; letter-spacing:0.3px;">
+          <span style="font-size:12px; font-weight:800; color:#bbf7d0; letter-spacing:0.4px; background:rgba(255,255,255,0.12); padding:5px 12px; border-radius:6px; border:1px solid rgba(255,255,255,0.25);">
             🌾 HR AGRO DIVISION • APEDA &amp; DGFT REGISTERED
           </span>
         </div>
@@ -1485,7 +1496,7 @@
     <nav class="gse-subnav">
       <div class="container subnav-flex">
         <div style="display:flex; align-items:center; gap:8px;">
-          <span style="font-size:12px; font-weight:800; color:#fde047; letter-spacing:0.3px;">
+          <span style="font-size:12px; font-weight:800; color:#fde047; letter-spacing:0.4px; background:rgba(234,179,8,0.15); padding:5px 12px; border-radius:6px; border:1px solid rgba(234,179,8,0.4);">
             🛡️ MSME, STARTUP INDIA &amp; GST REGISTERED ENTERPRISE
           </span>
         </div>
@@ -1553,7 +1564,7 @@
             </div>
             <div style="padding:24px;">
               <h3 style="font-size:18px; font-weight:900; margin-bottom:8px; color:#0f172a;">
-                1. Battery-Operated Sit-Down Electric Platform Truck (Burden Carrier)
+                Battery-Operated Sit-Down Electric Platform Truck (Burden Carrier)
               </h3>
               <p style="font-size:13px; color:#475569; line-height:1.5;">
                 Heavy-duty zero-emission electric platform trolley featuring a dual-seat forward operator cabin, automotive steering wheel, twin rectangular LED headlights, amber turn indicators, and a reinforced flat steel cargo bed for airport terminals, MRO hangars, and industrial plants.
@@ -1584,7 +1595,7 @@
             </div>
             <div style="padding:24px;">
               <h3 style="font-size:18px; font-weight:900; margin-bottom:8px; color:#0f172a;">
-                2. Heavy-Duty Mid-Cockpit Electric Deck Utility Cart
+                Heavy-Duty Mid-Cockpit Electric Deck Utility Cart
               </h3>
               <p style="font-size:13px; color:#475569; line-height:1.5;">
                 High-clearance industrial electric utility vehicle designed with an elevated center operator seat and steering console, full-length anti-slip diamond-plate steel deck for long aviation spares, heavy-duty leaf-spring axle suspension, and rugged lugged traction tires.
@@ -1615,7 +1626,7 @@
             </div>
             <div style="padding:24px;">
               <h3 style="font-size:18px; font-weight:900; margin-bottom:8px; color:#0f172a;">
-                3. Airport GSE Towable Baggage &amp; Cargo Trailer Dolly
+                Airport GSE Towable Baggage &amp; Cargo Trailer Dolly
               </h3>
               <p style="font-size:13px; color:#475569; line-height:1.5;">
                 Standard airport apron towable cargo and baggage cart with front/rear yellow safety end-racks, hot-dip galvanized checkered steel deck, 360° fifth-wheel turntable steering, towbar-actuated parking brake (locks when raised or dropped), and rear spring hitch for multi-trailer train towing.
@@ -1646,7 +1657,7 @@
             </div>
             <div style="padding:24px;">
               <h3 style="font-size:18px; font-weight:900; margin-bottom:8px; color:#0f172a;">
-                4. Self-Propelled Electro-Hydraulic Double-Scissor Lift Trolley
+                Self-Propelled Electro-Hydraulic Double-Scissor Lift Trolley
               </h3>
               <p style="font-size:13px; color:#475569; line-height:1.5;">
                 Heavy-duty mobile elevating work table and MRO component loader featuring a high-stability double-scissor hydraulic lifting mechanism, lipped safety tray deck, motorized front differential drive axle, rear heavy-duty swivel casters, and perimeter bumper protection.
@@ -1677,7 +1688,7 @@
             </div>
             <div style="padding:24px;">
               <h3 style="font-size:18px; font-weight:900; margin-bottom:8px; color:#0f172a;">
-                5. Towable Aircraft Passenger Staircase &amp; Maintenance Access Stand
+                Towable Aircraft Passenger Staircase &amp; Maintenance Access Stand
               </h3>
               <p style="font-size:13px; color:#475569; line-height:1.5;">
                 Heavy-duty mobile aircraft boarding and fuselage maintenance access staircase built on a rigid structural steel truss chassis. Equipped with anti-slip aluminum tread steps, full-height yellow safety side panels, stainless steel handrails, non-marking rubber fuselage bumper, and 4 screw-down outrigger jacks.
@@ -1708,7 +1719,7 @@
             </div>
             <div style="padding:24px;">
               <h3 style="font-size:18px; font-weight:900; margin-bottom:8px; color:#0f172a;">
-                6. Aircraft Maintenance &amp; Passenger Service Access Stand
+                Aircraft Maintenance &amp; Passenger Service Access Stand
               </h3>
               <p style="font-size:13px; color:#475569; line-height:1.5;">
                 Specialized aircraft ground-support equipment engineered for passenger boarding assistance and hangar maintenance access. Built with durable structural trusses, non-slip wide steps, operator tiller handle, and heavy-duty industrial pneumatic/solid tires.
@@ -1877,19 +1888,23 @@
       drawer.classList.toggle('open');
     }
 
-    // Smooth scroll for Agro section internal anchors
+    // Smooth scroll for Agro section internal anchors with navbar offset
     function scrollToAgroSection(sectionId) {
       const el = document.getElementById(sectionId);
       if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const navHeight = document.getElementById('main-navbar')?.offsetHeight || 72;
+        const targetPos = el.getBoundingClientRect().top + window.pageYOffset - navHeight - 16;
+        window.scrollTo({ top: targetPos, behavior: 'smooth' });
       }
     }
 
-    // Smooth scroll for GSE section internal anchors
+    // Smooth scroll for GSE section internal anchors with navbar offset
     function scrollToGSESection(sectionId) {
       const el = document.getElementById(sectionId);
       if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const navHeight = document.getElementById('main-navbar')?.offsetHeight || 72;
+        const targetPos = el.getBoundingClientRect().top + window.pageYOffset - navHeight - 16;
+        window.scrollTo({ top: targetPos, behavior: 'smooth' });
       }
     }
 
