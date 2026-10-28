@@ -1,0 +1,14 @@
+# Build & archive artifacts
+*.zip
+*.backup
+*.tmp
+*.log
+gemini-code-*.html
+
+# Operating system files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Scratch & test scripts
+scratch/

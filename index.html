@@ -1,0 +1,2074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HR Enterprises (HR Global Import Export) | Corporate Portal</title>
+  
+  <!-- SEO & Social Sharing Metadata -->
+  <meta name="description" content="HR Enterprises (HR Global Import Export) - Leading Indian Exporter of Premium 1121/1509 Basmati & Non-Basmati Rice and Manufacturer of Aviation Ground Support Equipment (GSE), Platform Trucks, and Baggage Trailers.">
+  <meta name="keywords" content="HR Enterprises, HR Global Import Export, Indian Basmati Rice Exporter, 1121 Basmati Rice, IR-64 Parboiled Rice, Aviation Ground Support Equipment, Airport GSE, Battery Operated Platform Truck, Airport Baggage Trailer, Aircraft Boarding Staircase, Scissor Lift Trolley">
+  <meta name="author" content="HR Enterprises">
+  <meta name="robots" content="index, follow">
+
+  <!-- OpenGraph Social Cards (WhatsApp, LinkedIn, Facebook) -->
+  <meta property="og:title" content="HR Enterprises (HR Global Import Export) | Corporate Portal">
+  <meta property="og:description" content="International Commodity Exporters & Aviation Ground Support Equipment (GSE) Engineering Solutions. Certified Indian Basmati Rice & Airport GSE Equipment.">
+  <meta property="og:image" content="images/img-gw-gse.jpg">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20y=%220%22%20width=%22100%22%20height=%22100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+
+  <style>
+    :root {
+      --gw-bg: #0b1120;
+      --gw-card: #1e293b;
+      --gw-card-hover: #24344d;
+      --gw-border: #334155;
+      --gw-accent: #f59e0b;
+      --gw-accent-hover: #fbbf24;
+
+      --agro-primary: #14532d;
+      --agro-primary-dark: #0d381e;
+      --agro-accent: #d97706;
+      --agro-bg: #fcfaf5;
+      --agro-card: #ffffff;
+      --agro-text: #0f172a;
+
+      --gse-primary: #0f172a;
+      --gse-accent: #eab308;
+      --gse-bg: #f8fafc;
+      --gse-card: #ffffff;
+      --gse-text: #0f172a;
+
+      --text-muted: #94a3b8;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--gw-bg);
+      color: #f8fafc;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      padding-top: 72px;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1260px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .hidden { display: none !important; }
+
+    /* ============================================================
+       ANIMATION DEFINITIONS & KEYFRAMES
+    ============================================================ */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulseBadge {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4);
+        border-color: rgba(245, 158, 11, 0.4);
+      }
+      50% {
+        box-shadow: 0 0 0 8px rgba(245, 158, 11, 0);
+        border-color: rgba(245, 158, 11, 0.8);
+      }
+    }
+
+    @keyframes waFloat {
+      0%, 100% {
+        transform: translateY(0) scale(1);
+        box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+      }
+      50% {
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 14px 28px rgba(37, 211, 102, 0.65);
+      }
+    }
+
+    @keyframes shineSweep {
+      0% { left: -100%; }
+      100% { left: 160%; }
+    }
+
+    @keyframes pageSwitchFade {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .view-active-animated {
+      animation: pageSwitchFade 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Scroll Reveal System */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .reveal-on-scroll.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Stagger Delays */
+    .delay-1 { transition-delay: 0.08s; }
+    .delay-2 { transition-delay: 0.16s; }
+    .delay-3 { transition-delay: 0.24s; }
+    .delay-4 { transition-delay: 0.32s; }
+    .delay-5 { transition-delay: 0.40s; }
+    .delay-6 { transition-delay: 0.48s; }
+
+    /* Button Light Reflection Sweep Effect */
+    .gw-enter-btn, .btn-nav-rfq, .btn-nav-wa, .agro-card-btn, .btn-agro-wa {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gw-enter-btn::after, .btn-nav-rfq::after, .agro-card-btn::after {
+      content: '';
+      position: absolute;
+      top: -50%; left: -100%;
+      width: 50%;
+      height: 200%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transform: rotate(25deg);
+      pointer-events: none;
+    }
+
+    .gw-enter-btn:hover::after, .btn-nav-rfq:hover::after, .agro-card-btn:hover::after {
+      animation: shineSweep 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* ============================================================
+       MASTER CORPORATE NAVIGATION
+    ============================================================ */
+    #main-navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: rgba(2, 6, 23, 0.95);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(51, 65, 85, 0.8);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      height: 72px;
+      animation: fadeInDown 0.5s ease-out;
+    }
+
+    .nav-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand-block {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s ease;
+    }
+    .brand-block:hover { transform: scale(1.02); }
+
+    .brand-logo-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #020617;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 20px;
+      letter-spacing: -1px;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.35);
+      flex-shrink: 0;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .brand-block:hover .brand-logo-badge {
+      transform: rotate(-6deg) scale(1.08);
+    }
+
+    .brand-text-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-size: 17px;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+      line-height: 1.2;
+    }
+
+    .brand-tagline {
+      font-size: 11px;
+      font-weight: 700;
+      color: #fbbf24;
+      letter-spacing: 0.4px;
+    }
+
+    .division-nav-pills {
+      display: flex;
+      gap: 6px;
+      background: #0f172a;
+      padding: 5px;
+      border-radius: 12px;
+      border: 1px solid #334155;
+    }
+
+    .div-tab-btn {
+      border: none;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      background: transparent;
+      color: #94a3b8;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      white-space: nowrap;
+    }
+
+    .div-tab-btn:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-1px);
+    }
+
+    .div-tab-btn.active {
+      background: #f59e0b;
+      color: #020617;
+      box-shadow: 0 2px 10px rgba(245, 158, 11, 0.4);
+      transform: scale(1.02);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-nav-rfq {
+      background: #2563eb;
+      color: #ffffff;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 800;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-nav-rfq:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+    }
+
+    .btn-nav-wa {
+      background: #22c55e;
+      color: #ffffff;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-nav-wa:hover {
+      background: #16a34a;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(34, 197, 94, 0.4);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    /* ============================================================
+       TAB 1: CORPORATE GATEWAY VIEW
+    ============================================================ */
+    #view-gateway {
+      flex: 1;
+      padding: 56px 0 80px;
+      background: radial-gradient(circle at 50% 20%, #1e293b 0%, #0b1120 80%);
+    }
+
+    .gw-hero {
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto 52px;
+      animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .gw-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245, 158, 11, 0.12);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      animation: pulseBadge 3s infinite ease-in-out;
+    }
+
+    .gw-hero h1 {
+      font-size: 46px;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.15;
+      margin-bottom: 14px;
+      letter-spacing: -0.5px;
+      background: linear-gradient(180deg, #ffffff 60%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gw-hero-tagline {
+      color: #cbd5e1;
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+
+    .gw-contact-strip {
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid #334155;
+      padding: 8px 22px;
+      border-radius: 999px;
+      font-size: 13px;
+      color: #94a3b8;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    }
+    .gw-contact-strip a {
+      color: #f59e0b;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .gw-contact-strip a:hover { color: #fbbf24; text-decoration: underline; }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 32px;
+      margin-bottom: 64px;
+    }
+
+    .gw-card {
+      background: var(--gw-card);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--gw-border);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+    }
+
+    .gw-card:hover {
+      transform: translateY(-8px) scale(1.01);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.65);
+      border-color: #64748b;
+    }
+
+    .gw-card-img {
+      position: relative;
+      height: 300px;
+      background: #0f172a;
+      overflow: hidden;
+    }
+
+    .gw-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .gw-card:hover .gw-card-img img { transform: scale(1.06); }
+
+    .gw-division-badge {
+      position: absolute;
+      top: 16px; left: 16px;
+      z-index: 10;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+    }
+
+    .gw-card-body { padding: 30px; }
+
+    .gw-card-title {
+      font-size: 26px;
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 12px;
+      line-height: 1.25;
+    }
+    .gw-card:hover .gw-card-title { color: #f59e0b; }
+
+    .gw-card-desc {
+      color: #cbd5e1;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .gw-highlights-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .gw-highlights-list li {
+      font-size: 13px;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+    .gw-card:hover .gw-highlights-list li {
+      color: #cbd5e1;
+      transform: translateX(4px);
+    }
+
+    .gw-highlights-list li::before {
+      content: "✓";
+      color: #22c55e;
+      font-weight: 900;
+    }
+
+    .gw-enter-btn {
+      width: 100%;
+      border: none;
+      padding: 16px 24px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 900;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .gw-enter-btn:hover {
+      filter: brightness(1.12);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .trust-strip {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: var(--radius-md);
+      padding: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      align-items: center;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .trust-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 10px;
+      border-radius: 10px;
+      transition: transform 0.2s ease;
+    }
+    .trust-item:hover {
+      transform: translateY(-3px);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .stat-number-wrap {
+      font-size: 32px;
+      font-weight: 900;
+      color: #f59e0b;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .trust-item-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .trust-item-desc {
+      font-size: 12px;
+      color: #94a3b8;
+    }
+
+    /* ============================================================
+       TAB 2: HR AGRO RICE EXPORT DIVISION
+    ============================================================ */
+    #view-agro {
+      background: var(--agro-bg);
+      color: var(--agro-text);
+      min-height: 100vh;
+      flex: 1;
+    }
+
+    .agro-subnav {
+      background: var(--agro-primary);
+      color: #ffffff;
+      padding: 14px 0;
+      border-bottom: 3px solid var(--agro-accent);
+      position: sticky;
+      top: 72px;
+      z-index: 90;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    .subnav-flex {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .subnav-links {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .subnav-links button, .subnav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 7px 14px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .subnav-links button:hover, .subnav-links a:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateY(-1px);
+    }
+
+    .btn-return-portal {
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-return-portal:hover {
+      background: #ffffff;
+      color: #0f172a;
+      transform: translateX(-3px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    /* Brochure Page Jump Filter Bar */
+    .brochure-filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .brochure-jump-btn {
+      background: #ffffff;
+      color: #14532d;
+      border: 1.5px solid #bbf7d0;
+      padding: 9px 18px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .brochure-jump-btn:hover {
+      background: #14532d;
+      color: #ffffff;
+      border-color: #14532d;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(20, 83, 45, 0.15);
+    }
+
+    .canva-gallery { padding: 24px 0 36px; }
+
+    .canva-page-frame {
+      position: relative;
+      background: #ffffff;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border: 2px solid #e2e8f0;
+      margin-bottom: 36px;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+    }
+
+    .canva-page-frame:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
+    }
+
+    .canva-page-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .canva-page-indicator {
+      position: absolute;
+      top: 14px; right: 14px;
+      background: rgba(15, 23, 42, 0.85);
+      color: #fbbf24;
+      font-size: 11px;
+      font-weight: 900;
+      padding: 5px 12px;
+      border-radius: 999px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 26px;
+    }
+
+    .agro-card {
+      background: var(--agro-card);
+      border-radius: 18px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s;
+    }
+    .agro-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 36px rgba(20, 83, 45, 0.12);
+      border-color: #86efac;
+    }
+
+    .agro-card-btn {
+      width: 100%;
+      margin-top: 18px;
+      padding: 12px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 900;
+      cursor: pointer;
+      border: none;
+      background: #14532d;
+      color: #ffffff;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .agro-card-btn:hover {
+      background: #15803d;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(20, 83, 45, 0.3);
+    }
+
+    .rfq-box {
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 48px;
+      margin-bottom: 48px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group label {
+      font-size: 12px;
+      font-weight: 700;
+      color: #e2e8f0;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 13px 16px;
+      border-radius: 10px;
+      border: 1px solid #475569;
+      background: #1e293b;
+      color: #ffffff;
+      font-size: 14px;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s;
+    }
+
+    .form-input:focus {
+      border-color: #f59e0b;
+      box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.25);
+      transform: scale(1.01);
+    }
+
+    .form-dual-actions {
+      grid-column: 1 / -1;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+
+    .btn-agro-submit {
+      flex: 2;
+      min-width: 260px;
+      border: none;
+      padding: 15px 22px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 900;
+      cursor: pointer;
+      background: #f59e0b;
+      color: #020617;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .btn-agro-submit:hover {
+      background: #fbbf24;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+    }
+
+    .btn-agro-wa {
+      flex: 1;
+      min-width: 220px;
+      border: none;
+      padding: 15px 22px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 900;
+      cursor: pointer;
+      background: #22c55e;
+      color: #ffffff;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .btn-agro-wa:hover {
+      background: #16a34a;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4);
+    }
+
+    /* ============================================================
+       TAB 3: HR AERO & GSE ENGINEERING DIVISION
+    ============================================================ */
+    #view-gse {
+      background: var(--gse-bg);
+      color: var(--gse-text);
+      min-height: 100vh;
+      flex: 1;
+    }
+
+    .gse-subnav {
+      background: var(--gse-primary);
+      color: #ffffff;
+      padding: 14px 0;
+      border-bottom: 3px solid var(--gse-accent);
+      position: sticky;
+      top: 72px;
+      z-index: 90;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .gse-hero {
+      background: linear-gradient(135deg, #0b1120 0%, #1e293b 100%);
+      color: #ffffff;
+      padding: 60px 0;
+      border-bottom: 4px solid var(--gse-accent);
+    }
+
+    .gse-card {
+      background: var(--gse-card);
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid #cbd5e1;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+    }
+
+    .gse-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.16);
+      border-color: #94a3b8;
+    }
+
+    .gse-img-box {
+      position: relative;
+      height: 250px;
+      background: #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    .gse-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .gse-card:hover .gse-img-box img { transform: scale(1.08); }
+
+    .gse-model-tag {
+      position: absolute;
+      bottom: 12px; left: 14px;
+      background: var(--gse-accent);
+      color: #020617;
+      font-size: 11px;
+      font-weight: 900;
+      padding: 4px 10px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
+    }
+    .gse-card:hover .gse-model-tag { transform: scale(1.04); }
+
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 14px;
+      font-size: 12px;
+    }
+
+    .spec-table tr {
+      border-bottom: 1px solid #e2e8f0;
+      transition: background 0.15s ease;
+    }
+    .spec-table tr:hover { background: rgba(0,0,0,0.02); }
+    .spec-table td { padding: 8px 4px; }
+    .spec-table td:first-child { font-weight: 700; color: #475569; width: 45%; }
+    .spec-table td:last-child { text-align: right; font-weight: 700; color: #0f172a; }
+
+    .pedigree-box {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 26px;
+      border-radius: 16px;
+      border-left: 5px solid #eab308;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .pedigree-box:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+    }
+
+    /* ============================================================
+       FLOATING WHATSAPP BUTTON WITH GENTLE PULSE
+    ============================================================ */
+    .floating-wa-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 999;
+      background: #25d366;
+      color: #ffffff;
+      border-radius: 999px;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+      animation: waFloat 4s infinite ease-in-out;
+      transition: all 0.25s ease;
+    }
+
+    .floating-wa-btn:hover {
+      background: #20ba5a;
+      animation-play-state: paused;
+      transform: scale(1.08) translateY(-4px);
+      box-shadow: 0 16px 32px rgba(37, 211, 102, 0.7);
+    }
+
+    .floating-wa-icon {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    footer {
+      background: #020617;
+      color: #94a3b8;
+      border-top: 1px solid #1e293b;
+      padding: 40px 0 30px;
+      font-size: 13px;
+    }
+
+    .footer-flex {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      transition: color 0.2s, transform 0.2s;
+    }
+    .footer-links a:hover {
+      color: #f59e0b;
+      transform: translateY(-1px);
+    }
+
+    /* ============================================================
+       RESPONSIVE BREAKPOINTS
+    ============================================================ */
+    @media (max-width: 900px) {
+      .division-nav-pills { display: none; }
+      .mobile-menu-btn { display: block; }
+      
+      .mobile-nav-drawer {
+        display: none;
+        position: fixed;
+        top: 72px; left: 0; right: 0;
+        background: #020617;
+        border-bottom: 1px solid #334155;
+        padding: 16px 20px;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 999;
+        animation: fadeInDown 0.3s ease;
+      }
+      .mobile-nav-drawer.open { display: flex; }
+      .mobile-nav-drawer .div-tab-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 12px;
+        font-size: 15px;
+      }
+      .gw-hero h1 { font-size: 32px; }
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      body { padding-top: 72px; }
+      .gw-hero h1 { font-size: 28px; }
+      .gw-card-img { height: 220px; }
+      .rfq-box { padding: 24px; }
+      .floating-wa-btn span { display: none; }
+      .floating-wa-btn { padding: 14px; }
+      .form-dual-actions { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= MASTER CORPORATE NAVIGATION BAR ================= -->
+  <header id="main-navbar">
+    <div class="nav-container">
+      
+      <!-- Brand Logo & Identity -->
+      <a class="brand-block" onclick="openTab('gateway')">
+        <div class="brand-logo-badge">HR</div>
+        <div class="brand-text-wrap">
+          <span class="brand-name">HR ENTERPRISES</span>
+          <span class="brand-tagline">HR Global Import Export</span>
+        </div>
+      </a>
+
+      <!-- Desktop Division Selector Pills -->
+      <div class="division-nav-pills">
+        <button class="div-tab-btn active" id="btn-tab-gateway" onclick="openTab('gateway')">
+          🏢 Corporate Home
+        </button>
+        <button class="div-tab-btn" id="btn-tab-agro" onclick="openTab('agro')">
+          🌾 HR Agro (Rice Export)
+        </button>
+        <button class="div-tab-btn" id="btn-tab-gse" onclick="openTab('gse')">
+          ✈️ HR Aero &amp; GSE
+        </button>
+      </div>
+
+      <!-- Quick Action CTAs -->
+      <div class="nav-actions">
+        <a href="https://wa.me/919814000000?text=Hi%20HR%20Enterprises,%20I%20would%20like%20to%20request%20an%20RFQ" target="_blank" class="btn-nav-wa" title="Instant WhatsApp RFQ">
+          💬 WhatsApp
+        </a>
+        <button onclick="scrollToCurrentRFQ()" class="btn-nav-rfq">
+          📩 Inquire RFQ
+        </button>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle menu">☰</button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-nav-drawer" id="mobile-drawer">
+      <button class="div-tab-btn active" id="btn-m-tab-gateway" onclick="openTab('gateway'); toggleMobileMenu();">
+        🏢 Corporate Home
+      </button>
+      <button class="div-tab-btn" id="btn-m-tab-agro" onclick="openTab('agro'); toggleMobileMenu();">
+        🌾 2. HR Agro (Rice Export)
+      </button>
+      <button class="div-tab-btn" id="btn-m-tab-gse" onclick="openTab('gse'); toggleMobileMenu();">
+        ✈️ 3. HR Aero &amp; GSE Engineering
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- TAB 1: CORPORATE GATEWAY PORTAL                                           -->
+  <!-- ========================================================================= -->
+  <main id="view-gateway" class="view-active-animated">
+    <div class="container">
+      
+      <!-- Hero Intro Header -->
+      <div class="gw-hero">
+        <div class="gw-badge">
+          🛡️ MSME • Startup India • GST Registered • APEDA Compliant
+        </div>
+        <h1>HR Global Import Export</h1>
+        <p class="gw-hero-tagline">
+          International Commodity Exporters &amp; Aviation Ground Support Equipment (GSE) Engineering Solutions.<br>
+          Delivering premium Indian agro commodities and precision ramp equipment worldwide.
+        </p>
+        <div class="gw-contact-strip">
+          <span>📧 Sales: <a href="mailto:sales@hrglobalimportexport.com">sales@hrglobalimportexport.com</a></span>
+          <span>•</span>
+          <span><a href="mailto:hrglobalimportexport@gmail.com">hrglobalimportexport@gmail.com</a></span>
+          <span>•</span>
+          <span>📍 Gurdaspur, Punjab, India</span>
+        </div>
+      </div>
+
+      <!-- Two Primary Business Divisions Cards -->
+      <div class="grid-2">
+        
+        <!-- Division 1: Agro Commodities Card -->
+        <div class="gw-card reveal-on-scroll delay-1">
+          <div>
+            <div class="gw-card-img">
+              <span class="gw-division-badge" style="background:#16a34a; color:#fff;">Agro Division</span>
+              <img src="images/img-gw-agro.jpg" alt="HR Agro Rice Export Website" loading="lazy">
+            </div>
+            <div class="gw-card-body">
+              <h2 class="gw-card-title">HR Enterprises Rice Export</h2>
+              <p class="gw-card-desc">
+                Premium Indian Basmati (1121, 1509, 1401, Pusa) and Non-Basmati (IR-64 Parboiled &amp; Raw, PR-11, Sona Masoori) Rice Exports for Global Gulf, African &amp; European Markets.
+              </p>
+              <ul class="gw-highlights-list">
+                <li>1121 &amp; 1509 Steam, Creamy &amp; Golden Sella (8.35mm+)</li>
+                <li>IR-64 Parboiled 5% / 25% Broken for High-Volume Staple Supply</li>
+                <li>100% Sortex Clean with SGS / Bureau Veritas Certification</li>
+                <li>Direct dispatch from Punjab mills via Mundra &amp; JNPT ports</li>
+              </ul>
+            </div>
+          </div>
+          <div style="padding:0 30px 30px;">
+            <button class="gw-enter-btn" style="background:#16a34a; color:#fff;" onclick="openTab('agro')">
+              🌾 Explore Agro Rice Export Division →
+            </button>
+          </div>
+        </div>
+
+        <!-- Division 2: Aviation GSE Card -->
+        <div class="gw-card reveal-on-scroll delay-2">
+          <div>
+            <div class="gw-card-img">
+              <span class="gw-division-badge" style="background:#eab308; color:#020617;">Aero &amp; GSE Division</span>
+              <img src="images/img-gw-gse.jpg" alt="HR GSE &amp; Engineering Website" loading="lazy">
+            </div>
+            <div class="gw-card-body">
+              <h2 class="gw-card-title">HR Aero &amp; GSE Engineering</h2>
+              <p class="gw-card-desc">
+                Precision Ground Support Equipment (GSE) and Heavy-Duty Electric Material Handling Vehicles designed to IATA and AHM airline ramp safety standards.
+              </p>
+              <ul class="gw-highlights-list">
+                <li>2T–3T Sit-Down Battery Operated Platform Trucks &amp; Deck Carts</li>
+                <li>IATA AHM 960 Towable Airport Baggage &amp; Cargo Dolly Trailers</li>
+                <li>Self-Propelled Electro-Hydraulic Scissor Lift Work Tables</li>
+                <li>Backed by 20+ Years Indian Air Force Engineering Pedigree</li>
+              </ul>
+            </div>
+          </div>
+          <div style="padding:0 30px 30px;">
+            <button class="gw-enter-btn" style="background:#eab308; color:#020617;" onclick="openTab('gse')">
+              ✈️ Explore GSE &amp; Engineering Division →
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Trust & Animated Counters Strip -->
+      <div class="trust-strip reveal-on-scroll delay-3">
+        <div class="trust-item">
+          <div class="stat-number-wrap"><span class="counter-number" data-target="20">0</span>+</div>
+          <span class="trust-item-title">Years Defense QA</span>
+          <span class="trust-item-desc">Indian Air Force Technical Pedigree</span>
+        </div>
+        <div class="trust-item">
+          <div class="stat-number-wrap"><span class="counter-number" data-target="100">0</span>%</div>
+          <span class="trust-item-title">Sortex Clean &amp; Tested</span>
+          <span class="trust-item-desc">SGS &amp; Bureau Veritas Inspection</span>
+        </div>
+        <div class="trust-item">
+          <div class="stat-number-wrap"><span class="counter-number" data-target="3000">0</span> kg</div>
+          <span class="trust-item-title">Max GSE Capacity</span>
+          <span class="trust-item-desc">Heavy-Duty Electric Platform Trucks</span>
+        </div>
+        <div class="trust-item">
+          <div class="stat-number-wrap"><span class="counter-number" data-target="15">0</span>+</div>
+          <span class="trust-item-title">Global Ports Connected</span>
+          <span class="trust-item-desc">Mundra, JNPT to GCC &amp; Africa</span>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- TAB 2: HR AGRO RICE EXPORT DIVISION WEBSITE                               -->
+  <!-- ========================================================================= -->
+  <section id="view-agro" class="hidden">
+    
+    <!-- Agro Subnavigation -->
+    <nav class="agro-subnav">
+      <div class="container subnav-flex">
+        <div>
+          <button class="btn-return-portal" onclick="openTab('gateway')">← Corporate Home</button>
+        </div>
+        <div class="subnav-links">
+          <button onclick="scrollToAgroSection('agro-brochure')">Brochure Pages</button>
+          <button onclick="scrollToAgroSection('agro-varieties')">Rice Varieties</button>
+          <button onclick="scrollToAgroSection('agro-rfq-section')" style="background:#d97706; border-color:#f59e0b; color:#fff;">Request FOB/CIF Quote</button>
+          <a href="https://wa.me/919814000000?text=Hi%20HR%20Enterprises,%20I%20am%20interested%20in%20Rice%20Export%20quotation." target="_blank" style="background:#22c55e; border-color:#16a34a; color:#fff;">💬 WhatsApp RFQ</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Agro Content Container -->
+    <div class="container" style="padding-top:32px; padding-bottom:60px;">
+      
+      <!-- Division Intro Banner with Working Actions -->
+      <div class="reveal-on-scroll" style="background:#14532d; color:#fff; border-radius:16px; padding:28px; margin-bottom:32px; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:20px; box-shadow:0 12px 30px rgba(20,83,45,0.25);">
+        <div>
+          <span style="background:rgba(255,255,255,0.2); padding:4px 10px; border-radius:6px; font-size:11px; font-weight:800; letter-spacing:0.5px;">APEDA &amp; DGFT REGISTERED EXPORTER</span>
+          <h2 style="font-size:28px; font-weight:900; margin-top:8px;">HR Enterprises — Rice Export Division</h2>
+          <p style="font-size:13px; color:#bbf7d0; margin-top:4px;">
+            Garfoor Bagh, Tibri Road, Gurdaspur, Punjab - 143531, India | Email: sales@hrglobalimportexport.com / hrglobalimportexport@gmail.com
+          </p>
+        </div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <button onclick="scrollToAgroSection('agro-rfq-section')" style="background:#f59e0b; color:#020617; font-weight:900; padding:12px 22px; border-radius:10px; border:none; cursor:pointer; font-size:13px; display:inline-flex; align-items:center; gap:6px;">
+            Request Export Price List →
+          </button>
+          <a href="https://wa.me/919814000000?text=Hello%20HR%20Enterprises,%20please%20send%20the%20latest%20FOB/CIF%20Rice%20Export%20Price%20List." target="_blank" style="background:rgba(255,255,255,0.15); color:#fff; border:1px solid rgba(255,255,255,0.3); font-weight:800; padding:12px 18px; border-radius:10px; text-decoration:none; font-size:13px; display:inline-flex; align-items:center; gap:6px;">
+            💬 Quick WhatsApp Chat
+          </a>
+        </div>
+      </div>
+
+      <!-- Canva Official Catalog Pages Presentation with Working Page Jump Buttons -->
+      <div id="agro-brochure" class="canva-gallery">
+        <div style="text-align:center; margin-bottom:20px;" class="reveal-on-scroll">
+          <span style="color:#14532d; font-size:12px; font-weight:900; letter-spacing:1px; text-transform:uppercase;">OFFICIAL EXPORT CATALOG</span>
+          <h3 style="font-size:28px; font-weight:900; color:#14532d;">Verified Product Specifications &amp; Quality Profile</h3>
+          <p style="color:#64748b; font-size:13px; margin-top:6px;">Click any button below to jump straight to that section of the official brochure:</p>
+        </div>
+
+        <!-- Interactive Page Selector Bar -->
+        <div class="brochure-filter-bar reveal-on-scroll">
+          <button class="brochure-jump-btn" onclick="jumpToCanvaPage('canva-p1')">📄 Page 1: Overview</button>
+          <button class="brochure-jump-btn" onclick="jumpToCanvaPage('canva-p2')">🌾 Page 2: Basmati Varieties</button>
+          <button class="brochure-jump-btn" onclick="jumpToCanvaPage('canva-p3')">🍚 Page 3: Non-Basmati</button>
+          <button class="brochure-jump-btn" onclick="jumpToCanvaPage('canva-p4')">📦 Page 4: Packaging</button>
+          <button class="brochure-jump-btn" onclick="jumpToCanvaPage('canva-p5')">🚢 Page 5: Global Ports</button>
+        </div>
+
+        <!-- Page 1 -->
+        <div class="canva-page-frame reveal-on-scroll" id="canva-p1">
+          <span class="canva-page-indicator">Page 1 of 5</span>
+          <img src="images/img-canva-1.png" alt="HR Enterprises Rice Export Brochure Page 1" loading="lazy">
+        </div>
+
+        <!-- Page 2 -->
+        <div class="canva-page-frame reveal-on-scroll" id="canva-p2">
+          <span class="canva-page-indicator">Page 2 of 5</span>
+          <img src="images/img-canva-2.png" alt="HR Enterprises Rice Export Brochure Page 2" loading="lazy">
+        </div>
+
+        <!-- Page 3 -->
+        <div class="canva-page-frame reveal-on-scroll" id="canva-p3">
+          <span class="canva-page-indicator">Page 3 of 5</span>
+          <img src="images/img-canva-3.png" alt="HR Enterprises Rice Export Brochure Page 3" loading="lazy">
+        </div>
+
+        <!-- Page 4 -->
+        <div class="canva-page-frame reveal-on-scroll" id="canva-p4">
+          <span class="canva-page-indicator">Page 4 of 5</span>
+          <img src="images/img-canva-4.png" alt="HR Enterprises Rice Export Brochure Page 4" loading="lazy">
+        </div>
+
+        <!-- Page 5 -->
+        <div class="canva-page-frame reveal-on-scroll" id="canva-p5">
+          <span class="canva-page-indicator">Page 5 of 5</span>
+          <img src="images/img-canva-5.png" alt="HR Enterprises Rice Export Brochure Page 5" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Rice Grades Specification Cards with WORKING Action Buttons -->
+      <div id="agro-varieties" style="margin-top:40px;">
+        <div style="text-align:center; max-width:800px; margin:0 auto 30px;" class="reveal-on-scroll">
+          <span style="font-size:12px; font-weight:900; color:#14532d; text-transform:uppercase; letter-spacing:1px;">VARIETIES &amp; PACKAGING</span>
+          <h3 style="font-size:28px; font-weight:900; color:#14532d; margin-top:4px;">Export Rice Grades &amp; Container Specifications</h3>
+          <p style="color:#64748b; font-size:13px; margin-top:4px;">Select any variety below to auto-fill the RFQ quote inquiry form:</p>
+        </div>
+
+        <div class="grid-3">
+          
+          <!-- Variety Card 1 -->
+          <div class="agro-card reveal-on-scroll delay-1">
+            <div>
+              <span style="background:#dcfce7; color:#166534; font-size:11px; font-weight:800; padding:4px 10px; border-radius:6px;">PREMIUM EXTRA LONG GRAIN</span>
+              <h4 style="font-size:20px; font-weight:900; color:#14532d; margin-top:10px;">1121 &amp; 1509 Basmati Rice</h4>
+              <p style="font-size:13px; color:#475569; margin:10px 0; line-height:1.5;">
+                Available in Steam, Creamy Sella, Golden Sella &amp; Raw. 8.35mm+ Extra Long Grain, rich natural aroma, 100% Sortex clean, elongation ratio 2.5x upon cooking.
+              </p>
+              <p style="font-size:12px; font-weight:800; color:#d97706;">
+                📦 Packing: 5kg, 10kg, 25kg, 50kg PP / BOPP / Non-Woven / Jute
+              </p>
+            </div>
+            <button type="button" class="agro-card-btn" onclick="prefillAgroRFQ('1121 & 1509 Basmati Rice (Steam / Sella)')">
+              Request 1121/1509 Basmati Quote →
+            </button>
+          </div>
+
+          <!-- Variety Card 2 -->
+          <div class="agro-card reveal-on-scroll delay-2">
+            <div>
+              <span style="background:#fef3c7; color:#92400e; font-size:11px; font-weight:800; padding:4px 10px; border-radius:6px;">HIGH VOLUME STAPLE</span>
+              <h4 style="font-size:20px; font-weight:900; color:#14532d; margin-top:10px;">IR-64 Parboiled &amp; White Rice</h4>
+              <p style="font-size:13px; color:#475569; margin:10px 0; line-height:1.5;">
+                High-volume staple non-basmati rice for West &amp; East African markets. Available in 5% Broken and 25% Broken grades with uniform polish and low chalkiness.
+              </p>
+              <p style="font-size:12px; font-weight:800; color:#d97706;">
+                🚢 Ports: Mundra, Kakinada &amp; JNPT (Nhava Sheva) to Global Ports
+              </p>
+            </div>
+            <button type="button" class="agro-card-btn" onclick="prefillAgroRFQ('IR-64 Parboiled & White Rice (5% / 25% Broken)')">
+              Request IR-64 Parboiled Quote →
+            </button>
+          </div>
+
+          <!-- Variety Card 3 -->
+          <div class="agro-card reveal-on-scroll delay-3">
+            <div>
+              <span style="background:#e0f2fe; color:#0369a1; font-size:11px; font-weight:800; padding:4px 10px; border-radius:6px;">CATERING &amp; SPECIALTY</span>
+              <h4 style="font-size:20px; font-weight:900; color:#14532d; margin-top:10px;">PR-11, 1401 &amp; Sona Masoori</h4>
+              <p style="font-size:13px; color:#475569; margin:10px 0; line-height:1.5;">
+                Premium medium and long-grain catering grades with SGS / Bureau Veritas pre-shipment inspection, Fumigation, and Phytosanitary certificates.
+              </p>
+              <p style="font-size:12px; font-weight:800; color:#d97706;">
+                🏷️ Custom Buyer Private Labeling (OEM) Supported
+              </p>
+            </div>
+            <button type="button" class="agro-card-btn" onclick="prefillAgroRFQ('PR-11, 1401 & Sona Masoori Non-Basmati')">
+              Request Non-Basmati Quote →
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Functional Agro RFQ Form with WORKING Submission & WhatsApp Handlers -->
+      <div id="agro-rfq-section" class="rfq-box reveal-on-scroll" style="background:#14532d; color:#ffffff;">
+        <span style="background:rgba(255,255,255,0.2); padding:4px 10px; border-radius:6px; font-size:11px; font-weight:800; letter-spacing:0.5px;">DIRECT MILL EXPORT QUOTE</span>
+        <h3 style="font-size:26px; font-weight:900; margin-top:8px;">Request FOB / CIF Rice Export Quotation</h3>
+        <p style="font-size:13px; color:#bbf7d0; margin-top:4px;">
+          Direct dispatch from Punjab processing mills. Inquiries delivered directly to <strong>sales@hrglobalimportexport.com</strong> and <strong>hrglobalimportexport@gmail.com</strong>
+        </p>
+
+        <form id="form-agro-rfq" onsubmit="handleRFQSubmit(event, 'HR Agro Rice Export')" class="form-grid">
+          <div class="form-group">
+            <label>Buyer Name &amp; Company Name *</label>
+            <input class="form-input" id="agro-buyer-name" name="buyer_name" placeholder="e.g. John Doe - Al Baraka Trading LLC" required>
+          </div>
+          <div class="form-group">
+            <label>Official Email Address *</label>
+            <input class="form-input" id="agro-buyer-email" type="email" name="buyer_email" placeholder="e.g. procurement@buyercompany.com" required>
+          </div>
+          <div class="form-group">
+            <label>WhatsApp / Phone Number with Country Code *</label>
+            <input class="form-input" id="agro-buyer-phone" type="tel" name="buyer_phone" placeholder="e.g. +971 50 123 4567" required>
+          </div>
+          <div class="form-group">
+            <label>Rice Variety &amp; Grade *</label>
+            <input class="form-input" id="agro-variety-input" name="variety" placeholder="e.g. 1121 Steam Basmati / IR-64 5% Parboiled" required>
+          </div>
+          <div class="form-group">
+            <label>Quantity (Metric Tons / FCL Containers) *</label>
+            <input class="form-input" id="agro-quantity-input" name="quantity" placeholder="e.g. 5 Containers (125 MT) monthly" required>
+          </div>
+          <div class="form-group">
+            <label>Destination Port &amp; Terms (FOB / CIF) *</label>
+            <input class="form-input" id="agro-destination-input" name="destination" placeholder="e.g. CIF Jebel Ali / CIF Tema / FOB Mundra" required>
+          </div>
+          
+          <div class="form-dual-actions">
+            <button type="submit" class="btn-agro-submit">
+              📩 Send Official Rice Export Inquiry (Email)
+            </button>
+            <button type="button" class="btn-agro-wa" onclick="sendAgroRFQViaWhatsApp()">
+              💬 Send via WhatsApp Instead
+            </button>
+          </div>
+        </form>
+        <div id="agro-form-status" style="margin-top:14px; font-size:13px; text-align:center; display:none; padding:12px; background:rgba(0,0,0,0.25); border-radius:8px;"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- TAB 3: HR AERO & GSE ENGINEERING DIVISION WEBSITE                         -->
+  <!-- ========================================================================= -->
+  <section id="view-gse" class="hidden">
+    
+    <!-- GSE Subnavigation -->
+    <nav class="gse-subnav">
+      <div class="container subnav-flex">
+        <div>
+          <button class="btn-return-portal" onclick="openTab('gateway')">← Corporate Home</button>
+        </div>
+        <div class="subnav-links">
+          <button onclick="scrollToGSESection('gse-catalog-section')">Equipment Catalog</button>
+          <button onclick="scrollToGSESection('gse-pedigree-section')">Quality &amp; Pedigree</button>
+          <button onclick="scrollToGSESection('gse-rfq-section')" style="background:#eab308; color:#020617; font-weight:900; border-color:#fde047;">Request GSE Quote</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- GSE Hero Banner -->
+    <div class="gse-hero">
+      <div class="container grid-2" style="align-items:center;">
+        <div class="reveal-on-scroll">
+          <span class="gw-badge" style="background:rgba(234, 179, 8, 0.15); color:#fde047; border-color:rgba(234, 179, 8, 0.4);">
+            AIRPORT RAMP GSE • MRO HANGARS • ELECTRIC MATERIAL HANDLING
+          </span>
+          <h1 style="font-size:38px; font-weight:900; line-height:1.2; margin:14px 0;">
+            Ground Support Equipment (GSE) &amp; Industrial Electric Vehicles
+          </h1>
+          <p style="color:#cbd5e1; font-size:15px; margin-bottom:24px; line-height:1.6;">
+            Precision-engineered Battery-Operated Platform Trucks, Mid-Cockpit Electric Utility Vehicles, IATA-compliant Towable Baggage Trailers, Electro-Hydraulic Scissor Lift Trolleys, and Towable Aircraft Boarding Staircases.
+          </p>
+          <div style="display:flex; gap:14px; flex-wrap:wrap;">
+            <button onclick="scrollToGSESection('gse-rfq-section')" style="display:inline-block; background:#eab308; color:#020617; font-weight:900; padding:13px 24px; border-radius:10px; border:none; cursor:pointer; font-size:14px;">
+              Request Technical Datasheet &amp; Price →
+            </button>
+            <a href="mailto:sales@hrglobalimportexport.com" style="display:inline-block; background:rgba(255,255,255,0.1); color:#fff; border:1px solid #475569; font-weight:800; padding:13px 20px; border-radius:10px; text-decoration:none; font-size:14px;">
+              Direct Engineering Inquiry
+            </a>
+          </div>
+        </div>
+        <div class="reveal-on-scroll delay-2" style="border-radius:18px; overflow:hidden; border:2px solid #eab308; background:#020617; height:320px; box-shadow:0 12px 32px rgba(0,0,0,0.4);">
+          <img src="images/img-gse-hero.png" style="width:100%; height:100%; object-fit:cover;" alt="Aircraft Boarding Staircase Hero Shot" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 GSE PRODUCTS CATALOG -->
+    <div class="container" id="gse-catalog-section" style="padding:52px 20px;">
+      
+      <div style="text-align:center; max-width:800px; margin:0 auto 40px;" class="reveal-on-scroll">
+        <span style="font-size:12px; font-weight:900; color:#b45309; text-transform:uppercase; letter-spacing:1px;">EQUIPMENT PORTFOLIO</span>
+        <h2 style="font-size:32px; font-weight:900; color:#0f172a; margin-top:6px;">Airport GSE &amp; Electric Platform Trolleys</h2>
+        <p style="color:#64748b; font-size:14px; margin-top:8px;">Custom-manufactured to customer payload specifications, airport ramp regulations, and MRO operational requirements.</p>
+      </div>
+
+      <div class="grid-3" id="gse-cards-grid">
+
+        <!-- GSE ITEM 1: Battery Operated Platform Trolley -->
+        <div class="gse-card reveal-on-scroll delay-1">
+          <div>
+            <div class="gse-img-box" style="background:#ffffff;">
+              <img src="images/img-gse-1.webp" style="object-fit:contain; padding:10px;" alt="Battery Operated Platform Trolley" loading="lazy">
+              <span class="gse-model-tag">Model: HR-BOPT-2000 • 2T to 3T</span>
+            </div>
+            <div style="padding:24px;">
+              <h3 style="font-size:18px; font-weight:900; margin-bottom:8px; color:#0f172a;">
+                1. Battery-Operated Sit-Down Electric Platform Truck (Burden Carrier)
+              </h3>
+              <p style="font-size:13px; color:#475569; line-height:1.5;">
+                Heavy-duty zero-emission electric platform trolley featuring a dual-seat forward operator cabin, automotive steering wheel, twin rectangular LED headlights, amber turn indicators, and a reinforced flat steel cargo bed for airport terminals, MRO hangars, and industrial plants.
+              </p>
+              <table class="spec-table">
+                <tbody>
+                  <tr><td>Rated Load Capacity</td><td>2,000 kg / 3,000 kg</td></tr>
+                  <tr><td>Power &amp; Controller</td><td>48V / 72V Traction Battery + AC Drive</td></tr>
+                  <tr><td>Wheels &amp; Tires</td><td>4-Wheel Solid Moulded Puncture-Proof</td></tr>
+                  <tr><td>Travel Speed / Range</td><td>15–20 km/h | 60–80 km per charge</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div style="padding:0 24px 24px;">
+            <button onclick="prefillGSERFQ('HR-BOPT-2000 Electric Platform Truck')" style="display:block; width:100%; border:none; cursor:pointer; text-align:center; background:#0f172a; color:#eab308; padding:12px; border-radius:10px; font-size:12px; font-weight:900;">
+              Inquire Price &amp; Datasheet →
+            </button>
+          </div>
+        </div>
+
+        <!-- GSE ITEM 2: Golden Electric Utility Cart -->
+        <div class="gse-card reveal-on-scroll delay-2">
+          <div>
+            <div class="gse-img-box">
+              <img src="images/img-gse-2.png" alt="Mid-Cockpit Electric Utility Cart" loading="lazy">
+              <span class="gse-model-tag">Model: HR-EUC-1500 • Mid-Cockpit</span>
+            </div>
+            <div style="padding:24px;">
+              <h3 style="font-size:18px; font-weight:900; margin-bottom:8px; color:#0f172a;">
+                2. Heavy-Duty Mid-Cockpit Electric Deck Utility Cart
+              </h3>
+              <p style="font-size:13px; color:#475569; line-height:1.5;">
+                High-clearance industrial electric utility vehicle designed with an elevated center operator seat and steering console, full-length anti-slip diamond-plate steel deck for long aviation spares, heavy-duty leaf-spring axle suspension, and rugged lugged traction tires.
+              </p>
+              <table class="spec-table">
+                <tbody>
+                  <tr><td>Load Capacity</td><td>1,500 kg – 2,500 kg</td></tr>
+                  <tr><td>Platform Deck</td><td>Full-Length Anti-Slip Checkered Steel</td></tr>
+                  <tr><td>Suspension &amp; Axle</td><td>Heavy-Duty Multi-Leaf Spring + Electric Axle</td></tr>
+                  <tr><td>Primary Use</td><td>Tarmac Line Maintenance &amp; Long Spares</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div style="padding:0 24px 24px;">
+            <button onclick="prefillGSERFQ('HR-EUC-1500 Mid-Cockpit Utility Cart')" style="display:block; width:100%; border:none; cursor:pointer; text-align:center; background:#0f172a; color:#eab308; padding:12px; border-radius:10px; font-size:12px; font-weight:900;">
+              Inquire Price &amp; Datasheet →
+            </button>
+          </div>
+        </div>
+
+        <!-- GSE ITEM 3: Airport GSE Baggage Trailer -->
+        <div class="gse-card reveal-on-scroll delay-3">
+          <div>
+            <div class="gse-img-box">
+              <img src="images/img-gse-3.webp" alt="Airport GSE Baggage Cargo Trailer" loading="lazy">
+              <span class="gse-model-tag">Model: HR-AE06 • IATA / AHM Compliant</span>
+            </div>
+            <div style="padding:24px;">
+              <h3 style="font-size:18px; font-weight:900; margin-bottom:8px; color:#0f172a;">
+                3. Airport GSE Towable Baggage &amp; Cargo Trailer Dolly
+              </h3>
+              <p style="font-size:13px; color:#475569; line-height:1.5;">
+                Standard airport apron towable cargo and baggage cart with front/rear yellow safety end-racks, hot-dip galvanized checkered steel deck, 360° fifth-wheel turntable steering, towbar-actuated parking brake (locks when raised or dropped), and rear spring hitch for multi-trailer train towing.
+              </p>
+              <table class="spec-table">
+                <tbody>
+                  <tr><td>Payload / Tare Weight</td><td>2,000 kg Capacity | ~500 kg Tare</td></tr>
+                  <tr><td>Overall Dimensions</td><td>3950 × 1760 × 1100 mm (Deck: 2460×1760)</td></tr>
+                  <tr><td>Steering &amp; Braking</td><td>Turntable (&lt;3.5m Radius) + Towbar Brake</td></tr>
+                  <tr><td>Towing Speed / Tires</td><td>25 km/h Max | 400-8 Solid Rubber Tires</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div style="padding:0 24px 24px;">
+            <button onclick="prefillGSERFQ('HR-AE06 Baggage Trailer Dolly')" style="display:block; width:100%; border:none; cursor:pointer; text-align:center; background:#0f172a; color:#eab308; padding:12px; border-radius:10px; font-size:12px; font-weight:900;">
+              Inquire Price &amp; Datasheet →
+            </button>
+          </div>
+        </div>
+
+        <!-- GSE ITEM 4: Mobile Scissor Lift Trolley -->
+        <div class="gse-card reveal-on-scroll delay-4">
+          <div>
+            <div class="gse-img-box">
+              <img src="images/img-gse-4.jpg" alt="Hydraulic Scissor Lift Platform Trolley" loading="lazy">
+              <span class="gse-model-tag">Model: HR-SLT-1000 • Double Scissor Lift</span>
+            </div>
+            <div style="padding:24px;">
+              <h3 style="font-size:18px; font-weight:900; margin-bottom:8px; color:#0f172a;">
+                4. Self-Propelled Electro-Hydraulic Double-Scissor Lift Trolley
+              </h3>
+              <p style="font-size:13px; color:#475569; line-height:1.5;">
+                Heavy-duty mobile elevating work table and MRO component loader featuring a high-stability double-scissor hydraulic lifting mechanism, lipped safety tray deck, motorized front differential drive axle, rear heavy-duty swivel casters, and perimeter bumper protection.
+              </p>
+              <table class="spec-table">
+                <tbody>
+                  <tr><td>Rated Lift Capacity</td><td>500 kg – 1,500 kg</td></tr>
+                  <tr><td>Elevation Range</td><td>450 mm (Collapsed) to 1,800 mm (Max)</td></tr>
+                  <tr><td>Hydraulic Safety</td><td>Dual Scissor + Overload &amp; Hose-Burst Valve</td></tr>
+                  <tr><td>Application</td><td>Aircraft Avionics, Wheel/Brake &amp; Tooling Lift</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div style="padding:0 24px 24px;">
+            <button onclick="prefillGSERFQ('HR-SLT-1000 Scissor Lift Trolley')" style="display:block; width:100%; border:none; cursor:pointer; text-align:center; background:#0f172a; color:#eab308; padding:12px; border-radius:10px; font-size:12px; font-weight:900;">
+              Inquire Price &amp; Datasheet →
+            </button>
+          </div>
+        </div>
+
+        <!-- GSE ITEM 5: Aircraft Passenger Boarding Staircase -->
+        <div class="gse-card reveal-on-scroll delay-5">
+          <div>
+            <div class="gse-img-box">
+              <img src="images/img-gse-5.jpg" alt="Towable Aircraft Boarding Staircase" loading="lazy">
+              <span class="gse-model-tag">Model: HR-APS-3800 • Hangar &amp; Ramp Access</span>
+            </div>
+            <div style="padding:24px;">
+              <h3 style="font-size:18px; font-weight:900; margin-bottom:8px; color:#0f172a;">
+                5. Towable Aircraft Passenger Staircase &amp; Maintenance Access Stand
+              </h3>
+              <p style="font-size:13px; color:#475569; line-height:1.5;">
+                Heavy-duty mobile aircraft boarding and fuselage maintenance access staircase built on a rigid structural steel truss chassis. Equipped with anti-slip aluminum tread steps, full-height yellow safety side panels, stainless steel handrails, non-marking rubber fuselage bumper, and 4 screw-down outrigger jacks.
+              </p>
+              <table class="spec-table">
+                <tbody>
+                  <tr><td>Top Platform Height</td><td>2,200 mm – 3,800 mm (Fixed / Adjustable)</td></tr>
+                  <tr><td>Fuselage Protection</td><td>Full-Width Cylindrical Rubber Nose Bumper</td></tr>
+                  <tr><td>Ground Stabilization</td><td>4 Mechanical Screw-Down Outrigger Jacks</td></tr>
+                  <tr><td>Steps &amp; Handrails</td><td>Anti-Slip Diamond Tread + SS Tubular Rails</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div style="padding:0 24px 24px;">
+            <button onclick="prefillGSERFQ('HR-APS-3800 Aircraft Boarding Staircase')" style="display:block; width:100%; border:none; cursor:pointer; text-align:center; background:#0f172a; color:#eab308; padding:12px; border-radius:10px; font-size:12px; font-weight:900;">
+              Inquire Price &amp; Datasheet →
+            </button>
+          </div>
+        </div>
+
+        <!-- GSE ITEM 6: Aircraft Maintenance & Service Stair -->
+        <div class="gse-card reveal-on-scroll delay-6">
+          <div>
+            <div class="gse-img-box">
+              <img src="images/img-gse-6.jpg" alt="Aircraft Maintenance Access Stand" loading="lazy">
+              <span class="gse-model-tag">Model: HR-EFC-1000 • Maintenance &amp; Ramp</span>
+            </div>
+            <div style="padding:24px;">
+              <h3 style="font-size:18px; font-weight:900; margin-bottom:8px; color:#0f172a;">
+                6. Aircraft Maintenance &amp; Passenger Service Access Stand
+              </h3>
+              <p style="font-size:13px; color:#475569; line-height:1.5;">
+                Specialized aircraft ground-support equipment engineered for passenger boarding assistance and hangar maintenance access. Built with durable structural trusses, non-slip wide steps, operator tiller handle, and heavy-duty industrial pneumatic/solid tires.
+              </p>
+              <table class="spec-table">
+                <tbody>
+                  <tr><td>Load Capacity</td><td>1,000 kg – 2,000 kg</td></tr>
+                  <tr><td>Steering &amp; Controls</td><td>Towable Tiller / Manual Steering Handle</td></tr>
+                  <tr><td>Platform Height</td><td>Custom built as per aircraft fleet requirement</td></tr>
+                  <tr><td>Tires</td><td>Heavy-Duty 4-Wheel Industrial Solid/Pneumatic</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div style="padding:0 24px 24px;">
+            <button onclick="prefillGSERFQ('HR-EFC-1000 Maintenance Access Stand')" style="display:block; width:100%; border:none; cursor:pointer; text-align:center; background:#0f172a; color:#eab308; padding:12px; border-radius:10px; font-size:12px; font-weight:900;">
+              Inquire Price &amp; Datasheet →
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 20+ Years Aviation QA Pedigree Section -->
+      <div id="gse-pedigree-section" class="grid-3" style="margin-top:48px;">
+        <div class="pedigree-box reveal-on-scroll delay-1">
+          <h4 style="color:#eab308; font-size:18px; font-weight:900; margin-bottom:8px;">🎖️ 20+ Years Aviation QA Pedigree</h4>
+          <p style="font-size:13px; color:#cbd5e1; line-height:1.6;">
+            Led by a veteran Indian Air Force engineering specialist, defect investigator, and quality auditor, ensuring zero-defect mechanical fabrication, weld integrity, and structural reliability.
+          </p>
+        </div>
+        <div class="pedigree-box reveal-on-scroll delay-2">
+          <h4 style="color:#eab308; font-size:18px; font-weight:900; margin-bottom:8px;">📐 Proof-Load &amp; MTC Certified</h4>
+          <p style="font-size:13px; color:#cbd5e1; line-height:1.6;">
+            All GSE trailers, passenger staircases, and electro-hydraulic lift trolleys undergo strict dimensional verification, weld NDT inspections, and certified proof-load testing prior to factory dispatch.
+          </p>
+        </div>
+        <div class="pedigree-box reveal-on-scroll delay-3">
+          <h4 style="color:#eab308; font-size:18px; font-weight:900; margin-bottom:8px;">🚢 Domestic &amp; Global Supply</h4>
+          <p style="font-size:13px; color:#cbd5e1; line-height:1.6;">
+            Supplying commercial airports, private airlines, defense airbases, and industrial campuses across India, Gulf/GCC, and African regions via sea freight through Mundra and JNPT ports.
+          </p>
+        </div>
+      </div>
+
+      <!-- Functional GSE RFQ Form -->
+      <div id="gse-rfq-section" class="rfq-box reveal-on-scroll" style="background:#0f172a; color:#ffffff;">
+        <span style="background:rgba(234, 179, 8, 0.2); color:#fde047; padding:4px 10px; border-radius:6px; font-size:11px; font-weight:800; letter-spacing:0.5px;">
+          TECHNICAL DATASHEET &amp; COMMERCIAL RFQ
+        </span>
+        <h3 style="font-size:26px; font-weight:900; color:#eab308; margin-top:8px;">
+          Request GSE Quotation / Engineering Specifications
+        </h3>
+        <p style="font-size:13px; color:#cbd5e1; margin-top:4px;">
+          Send your technical queries directly to <strong>sales@hrglobalimportexport.com</strong> or <strong>hrglobalimportexport@gmail.com</strong>
+        </p>
+
+        <form id="form-gse-rfq" onsubmit="handleRFQSubmit(event, 'HR Aero & GSE Engineering')" class="form-grid">
+          <div class="form-group">
+            <label>Full Name &amp; Organization / Airline / MRO *</label>
+            <input class="form-input" id="gse-buyer-name" name="buyer_name" placeholder="e.g. Capt. Rajesh Sharma - Apex Aviation MRO" required>
+          </div>
+          <div class="form-group">
+            <label>Official Email Address *</label>
+            <input class="form-input" id="gse-buyer-email" type="email" name="buyer_email" placeholder="e.g. procurement@aviationmro.com" required>
+          </div>
+          <div class="form-group">
+            <label>Phone / WhatsApp Number with Country Code *</label>
+            <input class="form-input" id="gse-buyer-phone" type="tel" name="buyer_phone" placeholder="e.g. +91 98140 XXXXX" required>
+          </div>
+          <div class="form-group">
+            <label>Equipment Model / Description *</label>
+            <input class="form-input" id="gse-equipment-input" name="variety" placeholder="e.g. HR-BOPT-2000 Electric Platform Truck" required>
+          </div>
+          <div class="form-group">
+            <label>Quantity &amp; Required Payload Tonnage *</label>
+            <input class="form-input" id="gse-quantity-input" name="quantity" placeholder="e.g. 4 Units, 3-Ton Capacity" required>
+          </div>
+          <div class="form-group">
+            <label>Delivery Airport / Port Location *</label>
+            <input class="form-input" id="gse-destination-input" name="destination" placeholder="e.g. Delhi IGI Airport / CIF Dubai Airport" required>
+          </div>
+          
+          <div class="form-dual-actions">
+            <button type="submit" class="btn-agro-submit" style="background:#eab308; color:#020617;">
+              ✈️ Send GSE Engineering RFQ (Email)
+            </button>
+            <button type="button" class="btn-agro-wa" onclick="sendGSERFQViaWhatsApp()">
+              💬 Send via WhatsApp Instead
+            </button>
+          </div>
+        </form>
+        <div id="gse-form-status" style="margin-top:14px; font-size:13px; text-align:center; display:none; padding:12px; background:rgba(0,0,0,0.25); border-radius:8px;"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FLOATING WHATSAPP BUTTON ================= -->
+  <a href="https://wa.me/919814000000?text=Hello%20HR%20Enterprises,%20I%20would%20like%20to%20request%20an%20RFQ%20for%20your%20products." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="floating-wa-btn" 
+     title="Chat with HR Enterprises on WhatsApp">
+    <svg class="floating-wa-icon" viewBox="0 0 24 24">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.586-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.694.06-2.115-.527-1.745-.722-2.883-2.483-2.97-2.599-.087-.116-.71-1.077-.71-2.054 0-.977.51-1.454.693-1.657.184-.202.404-.253.539-.253.136 0 .271.002.389.008.125.006.292-.047.456.347.169.406.578 1.411.628 1.513.051.101.085.22.017.355-.067.135-.102.22-.203.339-.101.119-.213.265-.304.356-.102.102-.208.212-.09.415.118.203.526.868 1.13 1.405.776.69 1.433.905 1.636 1.007.203.102.321.085.44-.051.118-.136.508-.593.644-.796.135-.203.271-.169.457-.101.186.068 1.185.559 1.388.66.203.102.338.153.389.237.051.085.051.491-.093.896z"/>
+    </svg>
+    <span>Chat on WhatsApp</span>
+  </a>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="container">
+      <div class="footer-flex">
+        <div>
+          <strong style="color:#ffffff; font-size:16px;">HR ENTERPRISES (HR Global Import Export)</strong>
+          <p style="margin-top:4px; font-size:12px;">Garfoor Bagh, Tibri Road, Gurdaspur, Punjab - 143531, India</p>
+          <p style="font-size:12px;">MSME, Startup India &amp; GST Registered Enterprise</p>
+        </div>
+        <div class="footer-links">
+          <a onclick="openTab('gateway')" style="cursor:pointer;">Corporate Home</a>
+          <a onclick="openTab('agro')" style="cursor:pointer;">Rice Export Division</a>
+          <a onclick="openTab('gse')" style="cursor:pointer;">GSE Engineering Division</a>
+          <a href="mailto:sales@hrglobalimportexport.com">sales@hrglobalimportexport.com</a>
+        </div>
+      </div>
+      <div style="text-align:center; border-top:1px solid #1e293b; padding-top:20px; font-size:12px; color:#64748b;">
+        &copy; 2026 HR Enterprises (HR Global Import Export). All Rights Reserved. Designed for International Trade &amp; Aviation Support.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= JAVASCRIPT & ACTION LOGIC ================= -->
+  <script>
+    // Tab switching between Corporate Home, Agro, and GSE
+    function openTab(tabName) {
+      ['gateway', 'agro', 'gse'].forEach(function(t) {
+        const viewEl = document.getElementById('view-' + t);
+        const btnDesk = document.getElementById('btn-tab-' + t);
+        const btnMob = document.getElementById('btn-m-tab-' + t);
+
+        if (viewEl) {
+          viewEl.classList.add('hidden');
+          viewEl.classList.remove('view-active-animated');
+        }
+        if (btnDesk) btnDesk.classList.remove('active');
+        if (btnMob) btnMob.classList.remove('active');
+      });
+
+      const targetView = document.getElementById('view-' + tabName);
+      const targetBtnDesk = document.getElementById('btn-tab-' + tabName);
+      const targetBtnMob = document.getElementById('btn-m-tab-' + tabName);
+
+      if (targetView) {
+        targetView.classList.remove('hidden');
+        void targetView.offsetWidth;
+        targetView.classList.add('view-active-animated');
+      }
+      if (targetBtnDesk) targetBtnDesk.classList.add('active');
+      if (targetBtnMob) targetBtnMob.classList.add('active');
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      setTimeout(checkScrollAnimations, 100);
+    }
+
+    // Toggle Mobile Navigation Drawer
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobile-drawer');
+      drawer.classList.toggle('open');
+    }
+
+    // Smooth scroll for Agro section internal anchors
+    function scrollToAgroSection(sectionId) {
+      const el = document.getElementById(sectionId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    // Smooth scroll for GSE section internal anchors
+    function scrollToGSESection(sectionId) {
+      const el = document.getElementById(sectionId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    // Jump smoothly to a specific Canva brochure page
+    function jumpToCanvaPage(pageId) {
+      const pageEl = document.getElementById(pageId);
+      if (pageEl) {
+        pageEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+
+    // Quick RFQ anchor scroll depending on active division
+    function scrollToCurrentRFQ() {
+      if (!document.getElementById('view-agro').classList.contains('hidden')) {
+        scrollToAgroSection('agro-rfq-section');
+      } else if (!document.getElementById('view-gse').classList.contains('hidden')) {
+        scrollToGSESection('gse-rfq-section');
+      } else {
+        openTab('agro');
+        setTimeout(() => {
+          scrollToAgroSection('agro-rfq-section');
+        }, 200);
+      }
+    }
+
+    // Prefill Agro RFQ form from Rice Variety cards
+    function prefillAgroRFQ(varietyName) {
+      const input = document.getElementById('agro-variety-input');
+      if (input) {
+        input.value = varietyName;
+      }
+      scrollToAgroSection('agro-rfq-section');
+      setTimeout(() => {
+        if (input) input.focus();
+      }, 400);
+    }
+
+    // Prefill GSE equipment input when clicking a product's inquire button
+    function prefillGSERFQ(modelName) {
+      const input = document.getElementById('gse-equipment-input');
+      if (input) {
+        input.value = modelName;
+      }
+      scrollToGSESection('gse-rfq-section');
+      setTimeout(() => {
+        if (input) input.focus();
+      }, 400);
+    }
+
+    // Send Agro RFQ directly via WhatsApp
+    function sendAgroRFQViaWhatsApp() {
+      const form = document.getElementById('form-agro-rfq');
+      const buyerName = document.getElementById('agro-buyer-name').value.trim() || 'Valued Buyer';
+      const variety = document.getElementById('agro-variety-input').value.trim() || 'Basmati / Non-Basmati Rice';
+      const quantity = document.getElementById('agro-quantity-input').value.trim() || 'Container Lot';
+      const destination = document.getElementById('agro-destination-input').value.trim() || 'FOB/CIF Port';
+      const email = document.getElementById('agro-buyer-email').value.trim() || '';
+      const phone = document.getElementById('agro-buyer-phone').value.trim() || '';
+
+      const msg = encodeURIComponent(
+        'Hello HR Enterprises (Rice Export Division),\n\n' +
+        'I would like to request an official FOB/CIF quotation:\n' +
+        '• Buyer/Company: ' + buyerName + '\n' +
+        '• Rice Variety: ' + variety + '\n' +
+        '• Quantity: ' + quantity + '\n' +
+        '• Destination: ' + destination + '\n' +
+        (email ? ('• Email: ' + email + '\n') : '') +
+        (phone ? ('• Phone: ' + phone + '\n') : '') +
+        '\nPlease share the latest price list and container specifications.'
+      );
+
+      window.open('https://wa.me/919814000000?text=' + msg, '_blank');
+    }
+
+    // Send GSE RFQ directly via WhatsApp
+    function sendGSERFQViaWhatsApp() {
+      const buyerName = document.getElementById('gse-buyer-name').value.trim() || 'Valued Client';
+      const equipment = document.getElementById('gse-equipment-input').value.trim() || 'Airport GSE Equipment';
+      const quantity = document.getElementById('gse-quantity-input').value.trim() || '1 Unit';
+      const destination = document.getElementById('gse-destination-input').value.trim() || 'Delivery Location';
+      const email = document.getElementById('gse-buyer-email').value.trim() || '';
+      const phone = document.getElementById('gse-buyer-phone').value.trim() || '';
+
+      const msg = encodeURIComponent(
+        'Hello HR Enterprises (Aero & GSE Division),\n\n' +
+        'I would like to request a technical datasheet and quotation:\n' +
+        '• Client/Organization: ' + buyerName + '\n' +
+        '• Equipment Model: ' + equipment + '\n' +
+        '• Quantity/Payload: ' + quantity + '\n' +
+        '• Delivery Airport/Port: ' + destination + '\n' +
+        (email ? ('• Email: ' + email + '\n') : '') +
+        (phone ? ('• Phone: ' + phone + '\n') : '') +
+        '\nPlease share technical drawings, IATA compliance data, and lead times.'
+      );
+
+      window.open('https://wa.me/919814000000?text=' + msg, '_blank');
+    }
+
+    // Professional RFQ Submission handler via Email
+    function handleRFQSubmit(event, division) {
+      event.preventDefault();
+      const form = event.target;
+      const statusDiv = form.id === 'form-agro-rfq' 
+        ? document.getElementById('agro-form-status') 
+        : document.getElementById('gse-form-status');
+
+      const formData = new FormData(form);
+      const buyerName = formData.get('buyer_name') || '';
+      const buyerEmail = formData.get('buyer_email') || '';
+      const buyerPhone = formData.get('buyer_phone') || '';
+      const variety = formData.get('variety') || '';
+      const quantity = formData.get('quantity') || '';
+      const destination = formData.get('destination') || '';
+
+      const emailSubject = encodeURIComponent('RFQ Inquiry: ' + division + ' - ' + buyerName);
+      const emailBody = encodeURIComponent(
+        'OFFICIAL RFQ INQUIRY\n' +
+        'Division: ' + division + '\n\n' +
+        'Buyer / Company: ' + buyerName + '\n' +
+        'Email Address: ' + buyerEmail + '\n' +
+        'Phone / WhatsApp: ' + buyerPhone + '\n' +
+        'Product / Model: ' + variety + '\n' +
+        'Quantity / Requirement: ' + quantity + '\n' +
+        'Destination Port / Location: ' + destination + '\n\n' +
+        'Sent via HR Enterprises Official Corporate Portal'
+      );
+
+      window.location.href = 'mailto:sales@hrglobalimportexport.com?cc=hrglobalimportexport@gmail.com&subject=' + 
+        emailSubject + '&body=' + emailBody;
+
+      if (statusDiv) {
+        statusDiv.style.display = 'block';
+        statusDiv.style.color = '#fbbf24';
+        statusDiv.innerHTML = '✓ <strong>Opening your email client...</strong> If it does not launch automatically, you can also click the green <strong>"Send via WhatsApp Instead"</strong> button right above!';
+      }
+    }
+
+    // ================= INTERSECTION OBSERVER SCROLL ANIMATIONS =================
+    function checkScrollAnimations() {
+      const elements = document.querySelectorAll('.reveal-on-scroll:not(.revealed)');
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= window.innerHeight * 0.90) {
+          el.classList.add('revealed');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkScrollAnimations, { passive: true });
+    window.addEventListener('DOMContentLoaded', () => {
+      checkScrollAnimations();
+      initAnimatedCounters();
+    });
+
+    // ================= ANIMATED NUMERICAL COUNTERS =================
+    let countersStarted = false;
+    function initAnimatedCounters() {
+      const counters = document.querySelectorAll('.counter-number');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !countersStarted) {
+            countersStarted = true;
+            counters.forEach(counter => {
+              const target = +counter.getAttribute('data-target');
+              const duration = 1800; // ms
+              const stepTime = 20;
+              const steps = duration / stepTime;
+              const increment = target / steps;
+              let current = 0;
+
+              const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                  counter.textContent = target;
+                  clearInterval(timer);
+                } else {
+                  counter.textContent = Math.floor(current);
+                }
+              }, stepTime);
+            });
+          }
+        });
+      }, { threshold: 0.3 });
+
+      const trustStrip = document.querySelector('.trust-strip');
+      if (trustStrip) observer.observe(trustStrip);
+    }
+  </script>
+</body>
+</html>
