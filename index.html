@@ -798,9 +798,9 @@
 
     .form-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-      margin-top: 22px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 24px;
     }
 
     .form-group {
@@ -813,11 +813,19 @@
       font-size: 12px;
       font-weight: 700;
       color: #e2e8f0;
+      min-height: 20px;
+      line-height: 1.3;
+      display: flex;
+      align-items: flex-end;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .form-input {
       width: 100%;
-      padding: 13px 16px;
+      height: 48px;
+      padding: 12px 16px;
       border-radius: 10px;
       border: 1px solid #475569;
       background: #1e293b;
@@ -836,15 +844,14 @@
 
     .form-dual-actions {
       grid-column: 1 / -1;
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      margin-top: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 14px;
     }
 
     .btn-agro-submit {
-      flex: 2;
-      min-width: 260px;
+      width: 100%;
       border: none;
       padding: 15px 22px;
       border-radius: 12px;
@@ -867,8 +874,7 @@
     }
 
     .btn-agro-wa {
-      flex: 1;
-      min-width: 220px;
+      width: 100%;
       border: none;
       padding: 15px 22px;
       border-radius: 12px;
@@ -1101,6 +1107,7 @@
       }
       .gw-hero h1 { font-size: 32px; }
       .grid-2 { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 600px) {
@@ -1110,7 +1117,8 @@
       .rfq-box { padding: 20px 16px; }
       .floating-wa-btn span { display: none; }
       .floating-wa-btn { padding: 14px; }
-      .form-dual-actions { flex-direction: column; }
+      .form-grid { grid-template-columns: 1fr; }
+      .form-dual-actions { grid-template-columns: 1fr; }
       .subnav-flex { flex-direction: column; align-items: flex-start; gap: 8px; }
       .subnav-links { width: 100%; overflow-x: auto; padding-bottom: 4px; }
     }
@@ -1188,9 +1196,9 @@
           Delivering premium Indian agro commodities and precision ramp equipment worldwide.
         </p>
         <div class="gw-contact-strip">
-          <span>📧 Sales: <a href="mailto:sales@hrglobalimportexport.com">sales@hrglobalimportexport.com</a></span>
+          <span>📧 Sales: <a href="mailto:sales@hrglobalimportexport.com" onclick="openMailLink('sales@hrglobalimportexport.com', 'Inquiry - HR Enterprises', event)">sales@hrglobalimportexport.com</a></span>
           <span>•</span>
-          <span><a href="mailto:hrglobalimportexport@gmail.com">hrglobalimportexport@gmail.com</a></span>
+          <span><a href="mailto:hrglobalimportexport@gmail.com" onclick="openMailLink('hrglobalimportexport@gmail.com', 'Inquiry - HR Enterprises', event)">hrglobalimportexport@gmail.com</a></span>
           <span>•</span>
           <span>📍 Gurdaspur, Punjab, India</span>
         </div>
@@ -1448,7 +1456,7 @@
 
         <form id="form-agro-rfq" onsubmit="handleRFQSubmit(event, 'HR Agro Rice Export')" class="form-grid">
           <div class="form-group">
-            <label>Buyer Name &amp; Company Name *</label>
+            <label>Buyer &amp; Company Name *</label>
             <input class="form-input" id="agro-buyer-name" name="buyer_name" placeholder="e.g. John Doe - Al Baraka Trading LLC" required>
           </div>
           <div class="form-group">
@@ -1456,7 +1464,7 @@
             <input class="form-input" id="agro-buyer-email" type="email" name="buyer_email" placeholder="e.g. procurement@buyercompany.com" required>
           </div>
           <div class="form-group">
-            <label>WhatsApp / Phone Number with Country Code *</label>
+            <label>WhatsApp / Phone Number *</label>
             <input class="form-input" id="agro-buyer-phone" type="tel" name="buyer_phone" placeholder="e.g. +971 50 123 4567" required>
           </div>
           <div class="form-group">
@@ -1464,11 +1472,11 @@
             <input class="form-input" id="agro-variety-input" name="variety" placeholder="e.g. 1121 Steam Basmati / IR-64 5% Parboiled" required>
           </div>
           <div class="form-group">
-            <label>Quantity (Metric Tons / FCL Containers) *</label>
+            <label>Quantity (MT / Containers) *</label>
             <input class="form-input" id="agro-quantity-input" name="quantity" placeholder="e.g. 5 Containers (125 MT) monthly" required>
           </div>
           <div class="form-group">
-            <label>Destination Port &amp; Terms (FOB / CIF) *</label>
+            <label>Destination Port &amp; Terms (FOB/CIF) *</label>
             <input class="form-input" id="agro-destination-input" name="destination" placeholder="e.g. CIF Jebel Ali / CIF Tema / FOB Mundra" required>
           </div>
           
@@ -1530,7 +1538,7 @@
             <button onclick="scrollToGSESection('gse-rfq-section')" style="display:inline-block; background:#eab308; color:#020617; font-weight:900; padding:13px 24px; border-radius:10px; border:none; cursor:pointer; font-size:14px;">
               Request Technical Datasheet &amp; Price →
             </button>
-            <a href="mailto:sales@hrglobalimportexport.com" style="display:inline-block; background:rgba(255,255,255,0.1); color:#fff; border:1px solid #475569; font-weight:800; padding:13px 20px; border-radius:10px; text-decoration:none; font-size:14px;">
+            <a href="mailto:sales@hrglobalimportexport.com" onclick="openMailLink('sales@hrglobalimportexport.com', 'Direct GSE Engineering Inquiry - HR Enterprises', event)" style="display:inline-block; background:rgba(255,255,255,0.1); color:#fff; border:1px solid #475569; font-weight:800; padding:13px 20px; border-radius:10px; text-decoration:none; font-size:14px; cursor:pointer;">
               Direct Engineering Inquiry
             </a>
           </div>
@@ -1776,7 +1784,7 @@
 
         <form id="form-gse-rfq" onsubmit="handleRFQSubmit(event, 'HR Aero & GSE Engineering')" class="form-grid">
           <div class="form-group">
-            <label>Full Name &amp; Organization / Airline / MRO *</label>
+            <label>Full Name &amp; Organization *</label>
             <input class="form-input" id="gse-buyer-name" name="buyer_name" placeholder="e.g. Capt. Rajesh Sharma - Apex Aviation MRO" required>
           </div>
           <div class="form-group">
@@ -1784,19 +1792,19 @@
             <input class="form-input" id="gse-buyer-email" type="email" name="buyer_email" placeholder="e.g. procurement@aviationmro.com" required>
           </div>
           <div class="form-group">
-            <label>Phone / WhatsApp Number with Country Code *</label>
-            <input class="form-input" id="gse-buyer-phone" type="tel" name="buyer_phone" placeholder="e.g. +91 60069 XXXXX" required>
+            <label>Phone / WhatsApp Number *</label>
+            <input class="form-input" id="gse-buyer-phone" type="tel" name="buyer_phone" placeholder="e.g. +91 60069 34322" required>
           </div>
           <div class="form-group">
-            <label>Equipment Model / Description *</label>
+            <label>Equipment Model / Type *</label>
             <input class="form-input" id="gse-equipment-input" name="variety" placeholder="e.g. HR-BOPT-2000 Electric Platform Truck" required>
           </div>
           <div class="form-group">
-            <label>Quantity &amp; Required Payload Tonnage *</label>
+            <label>Quantity &amp; Required Payload *</label>
             <input class="form-input" id="gse-quantity-input" name="quantity" placeholder="e.g. 4 Units, 3-Ton Capacity" required>
           </div>
           <div class="form-group">
-            <label>Delivery Airport / Port Location *</label>
+            <label>Delivery Airport / Location *</label>
             <input class="form-input" id="gse-destination-input" name="destination" placeholder="e.g. Delhi IGI Airport / CIF Dubai Airport" required>
           </div>
           
@@ -1840,7 +1848,7 @@
           <a onclick="openTab('gateway')" style="cursor:pointer;">Corporate Home</a>
           <a onclick="openTab('agro')" style="cursor:pointer;">Rice Export Division</a>
           <a onclick="openTab('gse')" style="cursor:pointer;">GSE Engineering Division</a>
-          <a href="mailto:sales@hrglobalimportexport.com">sales@hrglobalimportexport.com</a>
+          <a href="mailto:sales@hrglobalimportexport.com" onclick="openMailLink('sales@hrglobalimportexport.com', 'Inquiry - HR Enterprises', event)">sales@hrglobalimportexport.com</a>
         </div>
       </div>
       <div style="text-align:center; border-top:1px solid #1e293b; padding-top:20px; font-size:12px; color:#64748b;">
@@ -2003,42 +2011,165 @@
       window.open('https://wa.me/916006934322?text=' + msg, '_blank');
     }
 
-    // Professional RFQ Submission handler via Email
+    // Helper: Trigger mailto link reliably across desktop and mobile browsers
+    function triggerMailto(url) {
+      const a = document.createElement('a');
+      a.href = url;
+      a.style.display = 'none';
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(function() {
+        if (a.parentNode) a.parentNode.removeChild(a);
+      }, 500);
+    }
+
+    // Helper: Smart direct email link opener (Gmail compose in new tab + mailto fallback)
+    function openMailLink(email, subject, event) {
+      if (event && event.preventDefault) event.preventDefault();
+      const sub = encodeURIComponent(subject || 'Inquiry - HR Enterprises');
+      const gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + email + '&su=' + sub;
+      const mailtoUrl = 'mailto:' + email + '?subject=' + sub;
+
+      try {
+        const win = window.open(gmailUrl, '_blank');
+        if (!win || win.closed || typeof win.closed === 'undefined') {
+          triggerMailto(mailtoUrl);
+        }
+      } catch (e) {
+        triggerMailto(mailtoUrl);
+      }
+    }
+
+    // Helper: Copy RFQ text to clipboard
+    function copyInquiryToClipboard(btn) {
+      const text = decodeURIComponent(btn.getAttribute('data-inquiry') || '');
+      const prevHtml = btn.innerHTML;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function() {
+          btn.innerHTML = '✓ Copied to Clipboard!';
+          btn.style.background = '#15803d';
+          setTimeout(function() {
+            btn.innerHTML = prevHtml;
+            btn.style.background = '#334155';
+          }, 3000);
+        });
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.innerHTML = '✓ Copied to Clipboard!';
+        btn.style.background = '#15803d';
+        setTimeout(function() {
+          btn.innerHTML = prevHtml;
+          btn.style.background = '#334155';
+        }, 3000);
+      }
+    }
+
+    // Official RFQ Submission handler via Email & WhatsApp Dispatch
     function handleRFQSubmit(event, division) {
       event.preventDefault();
       const form = event.target;
-      const statusDiv = form.id === 'form-agro-rfq' 
+      const isAgro = form.id === 'form-agro-rfq';
+      const statusDiv = isAgro 
         ? document.getElementById('agro-form-status') 
         : document.getElementById('gse-form-status');
 
       const formData = new FormData(form);
-      const buyerName = formData.get('buyer_name') || '';
-      const buyerEmail = formData.get('buyer_email') || '';
-      const buyerPhone = formData.get('buyer_phone') || '';
-      const variety = formData.get('variety') || '';
-      const quantity = formData.get('quantity') || '';
-      const destination = formData.get('destination') || '';
+      const buyerName = (formData.get('buyer_name') || '').trim();
+      const buyerEmail = (formData.get('buyer_email') || '').trim();
+      const buyerPhone = (formData.get('buyer_phone') || '').trim();
+      const variety = (formData.get('variety') || '').trim();
+      const quantity = (formData.get('quantity') || '').trim();
+      const destination = (formData.get('destination') || '').trim();
 
-      const emailSubject = encodeURIComponent('RFQ Inquiry: ' + division + ' - ' + buyerName);
-      const emailBody = encodeURIComponent(
+      const subject = 'RFQ Inquiry: ' + division + ' - ' + (buyerName || 'Valued Buyer');
+      const emailText = 
         'OFFICIAL RFQ INQUIRY\n' +
-        'Division: ' + division + '\n\n' +
+        'Division: ' + division + '\n' +
+        '-----------------------------------------\n' +
         'Buyer / Company: ' + buyerName + '\n' +
         'Email Address: ' + buyerEmail + '\n' +
         'Phone / WhatsApp: ' + buyerPhone + '\n' +
-        'Product / Model: ' + variety + '\n' +
-        'Quantity / Requirement: ' + quantity + '\n' +
-        'Destination Port / Location: ' + destination + '\n\n' +
-        'Sent via HR Enterprises Official Corporate Portal'
+        'Product / Requirement: ' + variety + '\n' +
+        'Quantity / Scale: ' + quantity + '\n' +
+        'Destination / Port / Airport: ' + destination + '\n' +
+        '-----------------------------------------\n' +
+        'Sent via HR Enterprises Official Corporate Portal (hrglobalimportexport.com)';
+
+      const emailSubjectEnc = encodeURIComponent(subject);
+      const emailBodyEnc = encodeURIComponent(emailText);
+
+      // Primary: Gmail Webmail Direct Compose Link
+      const gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1' +
+        '&to=sales@hrglobalimportexport.com' +
+        '&cc=hrglobalimportexport@gmail.com' +
+        '&su=' + emailSubjectEnc +
+        '&body=' + emailBodyEnc;
+
+      // Secondary: Standard mailto link
+      const mailtoUrl = 'mailto:sales@hrglobalimportexport.com' +
+        '?cc=hrglobalimportexport@gmail.com' +
+        '&subject=' + emailSubjectEnc +
+        '&body=' + emailBodyEnc;
+
+      // WhatsApp direct pre-filled text
+      const waText = encodeURIComponent(
+        'Hi HR Enterprises, I submitted an RFQ for ' + division + ':\n\n' +
+        '*Buyer:* ' + buyerName + '\n' +
+        '*Email:* ' + buyerEmail + '\n' +
+        '*Phone:* ' + buyerPhone + '\n' +
+        '*Item:* ' + variety + '\n' +
+        '*Qty:* ' + quantity + '\n' +
+        '*Destination:* ' + destination
       );
+      const waUrl = 'https://wa.me/916006934322?text=' + waText;
 
-      window.location.href = 'mailto:sales@hrglobalimportexport.com?cc=hrglobalimportexport@gmail.com&subject=' + 
-        emailSubject + '&body=' + emailBody;
+      // Try opening Gmail Compose in a new browser tab
+      try {
+        const win = window.open(gmailUrl, '_blank');
+        if (!win || win.closed || typeof win.closed === 'undefined') {
+          triggerMailto(mailtoUrl);
+        }
+      } catch (e) {
+        triggerMailto(mailtoUrl);
+      }
 
+      // Display rich multi-channel action card so user is never stuck
       if (statusDiv) {
         statusDiv.style.display = 'block';
-        statusDiv.style.color = '#fbbf24';
-        statusDiv.innerHTML = '✓ <strong>Opening your email client...</strong> If it does not launch automatically, you can also click the green <strong>"Send via WhatsApp Instead"</strong> button right above!';
+        statusDiv.innerHTML = 
+          '<div style="background:#020617; border:2px solid #22c55e; border-radius:12px; padding:20px; text-align:left; color:#ffffff; box-shadow:0 10px 30px rgba(0,0,0,0.5);">' +
+            '<div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">' +
+              '<span style="font-size:24px;">✅</span>' +
+              '<div>' +
+                '<strong style="font-size:15px; color:#22c55e;">Inquiry Prepared for Official Dispatch!</strong>' +
+                '<p style="font-size:12px; color:#94a3b8; margin:2px 0 0;">Recipient: sales@hrglobalimportexport.com &amp; hrglobalimportexport@gmail.com</p>' +
+              '</div>' +
+            '</div>' +
+            '<p style="font-size:13px; color:#e2e8f0; margin:10px 0 14px; line-height:1.5;">' +
+              'Click your preferred option below to complete sending, or contact us instantly on WhatsApp:' +
+            '</p>' +
+            '<div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:10px;">' +
+              '<a href="' + gmailUrl + '" target="_blank" style="background:#ea4335; color:#ffffff; padding:12px 16px; border-radius:8px; font-size:13px; font-weight:800; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; gap:8px;">' +
+                '✉️ Send via Gmail (Web)' +
+              '</a>' +
+              '<a href="' + mailtoUrl + '" style="background:#2563eb; color:#ffffff; padding:12px 16px; border-radius:8px; font-size:13px; font-weight:800; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; gap:8px;">' +
+                '📬 Send via Default Mail (Outlook)' +
+              '</a>' +
+              '<a href="' + waUrl + '" target="_blank" style="background:#22c55e; color:#ffffff; padding:12px 16px; border-radius:8px; font-size:13px; font-weight:800; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; gap:8px;">' +
+                '💬 Send via WhatsApp Now' +
+              '</a>' +
+              '<button type="button" onclick="copyInquiryToClipboard(this)" data-inquiry="' + emailBodyEnc + '" style="background:#334155; color:#ffffff; padding:12px 16px; border-radius:8px; font-size:13px; font-weight:800; border:none; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; gap:8px;">' +
+                '📋 Copy Inquiry Text' +
+              '</button>' +
+            '</div>' +
+          '</div>';
+
+        statusDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
     }
 
