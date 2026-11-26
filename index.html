@@ -1217,6 +1217,9 @@
         <button class="div-tab-btn active" id="btn-tab-gateway" onclick="openTab('gateway')">
           🏢 Corporate Home
         </button>
+        <button class="div-tab-btn" id="btn-tab-about" onclick="scrollToAbout()">
+          ℹ️ About Us
+        </button>
         <button class="div-tab-btn" id="btn-tab-agro" onclick="openTab('agro')">
           🌾 HR Agro (Rice Export)
         </button>
@@ -1242,6 +1245,9 @@
     <div class="mobile-nav-drawer" id="mobile-drawer">
       <button class="div-tab-btn active" id="btn-m-tab-gateway" onclick="openTab('gateway'); toggleMobileMenu();">
         🏢 Corporate Home
+      </button>
+      <button class="div-tab-btn" id="btn-m-tab-about" onclick="scrollToAbout(); toggleMobileMenu();">
+        ℹ️ About Us
       </button>
       <button class="div-tab-btn" id="btn-m-tab-agro" onclick="openTab('agro'); toggleMobileMenu();">
         🌾 HR Agro (Rice Export)
@@ -1398,6 +1404,129 @@
       </div>
 
       
+      <!-- ========================================================================= -->
+      <!-- ABOUT US SECTION — HR ENTERPRISES                                          -->
+      <!-- ========================================================================= -->
+      <section id="about-us" class="about-us-section reveal-on-scroll" style="background:linear-gradient(180deg, rgba(30, 41, 59, 0.75) 0%, rgba(15, 23, 42, 0.95) 100%); border:1px solid #334155; border-radius:24px; padding:48px 36px; margin:44px auto; max-width:1100px; box-shadow:0 16px 40px rgba(0,0,0,0.35);">
+        
+        <!-- Section Header -->
+        <div style="text-align:center; max-width:920px; margin:0 auto 36px;">
+          <span style="font-size:12px; font-weight:800; color:#16a34a; text-transform:uppercase; letter-spacing:1.8px; display:inline-flex; align-items:center; gap:6px; background:rgba(22, 163, 74, 0.12); padding:6px 16px; border-radius:20px; border:1px solid rgba(22, 163, 74, 0.25); margin-bottom:14px;">
+            🌾 ABOUT HR ENTERPRISES • PUNJAB, INDIA
+          </span>
+          <h2 style="font-size:34px; font-weight:900; color:#ffffff; line-height:1.25; margin-bottom:18px;">
+            Prominent Indian Basmati &amp; Non-Basmati Rice Exporter, Supplier &amp; Trader
+          </h2>
+          <p style="font-size:16.5px; line-height:1.8; color:#cbd5e1; margin:0;">
+            HR Enterprises, located in Punjab, India, is a prominent exporter, supplier, and trader that specializes in a diverse range of high-quality Basmati rice and non-Basmati rice. Established in 2024, we have quickly gained a reputation for delivering premium products that meet the highest industry standards, both domestically and internationally.
+          </p>
+        </div>
+
+        <!-- Portfolios Showcase: Basmati & Non-Basmati Grid -->
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:24px; margin-bottom:34px;">
+          
+          <!-- Basmati Portfolio Card -->
+          <div style="background:#1e293b; border:1px solid #334155; border-top:4px solid #16a34a; border-radius:18px; padding:32px 28px; box-shadow:0 8px 24px rgba(0,0,0,0.25); display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+                <span style="background:rgba(22, 163, 74, 0.15); color:#4ade80; border:1px solid rgba(74, 222, 128, 0.3); font-size:12px; font-weight:800; padding:5px 12px; border-radius:8px; text-transform:uppercase; letter-spacing:0.8px;">
+                  🌾 Aromatic Portfolio
+                </span>
+                <span style="font-size:12.5px; color:#94a3b8; font-weight:600;">Culinary &amp; Gourmet</span>
+              </div>
+              <h3 style="font-size:22px; font-weight:900; color:#ffffff; margin-bottom:14px; line-height:1.3;">
+                Our Basmati Rice Portfolio
+              </h3>
+              <p style="font-size:15px; line-height:1.75; color:#cbd5e1; margin-bottom:18px;">
+                Our Basmati rice portfolio is designed to cater to varied culinary needs and is led by the sought-after <strong>1121 Basmati Rice</strong>—available in <strong>1121 Pusa Golden Sella, 1121 Pusa Parboiled (White Sella), 1121 Steam, and 1121 Raw varieties</strong>—known for its extra-long grains and exquisite aroma. We also offer <strong>Boiled Basmati Rice</strong> for those who prefer a traditional cooking process, alongside an extensive selection of premium varieties including <strong>1509 Basmati Rice (Steam, Golden Sella, and White Sella), 1718 Basmati Rice, 1401 Basmati Rice, Pusa Basmati (PB-1), and Traditional Basmati Rice (Taraori)</strong>. Rounding out our aromatic range are <strong>PR 11 Parboiled Basmati Rice, Sharbati Golden Basmati Rice, and Sugandha Basmati Rice</strong>, each valued for its distinct grain profile and cooking performance.
+              </p>
+            </div>
+            <div style="background:rgba(15, 23, 42, 0.6); border-radius:12px; padding:14px 16px; border:1px solid rgba(255,255,255,0.06);">
+              <span style="font-size:12px; font-weight:800; color:#4ade80; display:block; margin-bottom:6px;">✨ Featured Basmati Grades:</span>
+              <span style="font-size:12.5px; color:#cbd5e1; line-height:1.6; display:block;">
+                1121 (Golden Sella, White Sella, Steam, Raw) • Boiled Basmati • 1509 (Steam, Sella) • 1718 • 1401 • Pusa (PB-1) • Traditional Taraori • PR 11 Parboiled • Sharbati Golden • Sugandha
+              </span>
+            </div>
+          </div>
+
+          <!-- Non-Basmati Portfolio Card -->
+          <div style="background:#1e293b; border:1px solid #334155; border-top:4px solid #f59e0b; border-radius:18px; padding:32px 28px; box-shadow:0 8px 24px rgba(0,0,0,0.25); display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+                <span style="background:rgba(245, 158, 11, 0.15); color:#fbbf24; border:1px solid rgba(251, 191, 36, 0.3); font-size:12px; font-weight:800; padding:5px 12px; border-radius:8px; text-transform:uppercase; letter-spacing:0.8px;">
+                  🍚 Commercial &amp; Staple
+                </span>
+                <span style="font-size:12.5px; color:#94a3b8; font-weight:600;">High Volume &amp; Daily Meals</span>
+              </div>
+              <h3 style="font-size:22px; font-weight:900; color:#ffffff; margin-bottom:14px; line-height:1.3;">
+                Non-Basmati Rice Selection
+              </h3>
+              <p style="font-size:15px; line-height:1.75; color:#cbd5e1; margin-bottom:18px;">
+                In addition to Basmati rice, HR Enterprises provides a comprehensive selection of Non-Basmati rice varieties to suit everyday meals, regional dishes, and bulk commercial requirements. Our offerings include <strong>IR 64 Parboiled and Raw Non-Basmati Rice, Parmal White Non-Basmati Rice, Sona Masoori Rice (Raw and Steam), Swarna Rice (Raw and Parboiled), PR 14 and PR 106 Non-Basmati Rice, IR 36 Non-Basmati Rice, and Ponni Rice</strong>—popular choices worldwide for their affordability, consistency, and versatility.
+              </p>
+            </div>
+            <div style="background:rgba(15, 23, 42, 0.6); border-radius:12px; padding:14px 16px; border:1px solid rgba(255,255,255,0.06);">
+              <span style="font-size:12px; font-weight:800; color:#fbbf24; display:block; margin-bottom:6px;">✨ Featured Non-Basmati Grades:</span>
+              <span style="font-size:12.5px; color:#cbd5e1; line-height:1.6; display:block;">
+                IR 64 (Parboiled &amp; Raw) • Parmal White • Sona Masoori (Raw &amp; Steam) • Swarna (Raw &amp; Parboiled) • PR 14 • PR 106 • IR 36 • Ponni Rice
+              </span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Customer Satisfaction, Quality Control & Trust Values -->
+        <div style="background:rgba(15, 23, 42, 0.85); border:1px solid #334155; border-radius:18px; padding:32px 30px; margin-bottom:30px;">
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:24px; align-items:center;">
+            <div>
+              <h3 style="font-size:22px; font-weight:900; color:#ffffff; margin-bottom:12px; display:flex; align-items:center; gap:8px;">
+                🛡️ Customer Satisfaction &amp; Quality Control
+              </h3>
+              <p style="font-size:15.5px; line-height:1.75; color:#cbd5e1; margin-bottom:12px;">
+                At HR Enterprises, customer satisfaction is at the core of our business. We maintain rigorous quality control standards and provide reliable service to ensure our clients receive only the best products. Our team is dedicated to building lasting relationships with our customers, and we pride ourselves on our transparency, prompt delivery, and competitive pricing.
+              </p>
+              <p style="font-size:16px; font-weight:700; color:#4ade80; margin:0;">
+                Choose HR Enterprises for your rice needs, and experience the quality and reliability that sets us apart.
+              </p>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:12px; justify-content:center;">
+              <div style="background:#1e293b; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:12px 16px; display:flex; align-items:center; gap:12px;">
+                <span style="font-size:20px;">🔬</span>
+                <div>
+                  <div style="font-size:13.5px; font-weight:800; color:#ffffff;">Rigorous Quality Standards</div>
+                  <div style="font-size:12px; color:#94a3b8;">100% pre-dispatch inspection &amp; spec verification</div>
+                </div>
+              </div>
+              <div style="background:#1e293b; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:12px 16px; display:flex; align-items:center; gap:12px;">
+                <span style="font-size:20px;">🚢</span>
+                <div>
+                  <div style="font-size:13.5px; font-weight:800; color:#ffffff;">Prompt Global Delivery</div>
+                  <div style="font-size:12px; color:#94a3b8;">Direct Mundra &amp; JNPT mill-to-port logistics</div>
+                </div>
+              </div>
+              <div style="background:#1e293b; border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:12px 16px; display:flex; align-items:center; gap:12px;">
+                <span style="font-size:20px;">🤝</span>
+                <div>
+                  <div style="font-size:13.5px; font-weight:800; color:#ffffff;">Transparency &amp; Best Pricing</div>
+                  <div style="font-size:12px; color:#94a3b8;">Long-term partnerships &amp; competitive FOB/CIF rates</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Direct Action CTAs -->
+        <div style="text-align:center; display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+          <a href="#agro-rfq-section" onclick="openTab('agro'); setTimeout(function(){ scrollToAgroSection('agro-rfq-section'); }, 100); return false;" style="background:#16a34a; color:#ffffff; font-weight:800; font-size:14.5px; padding:14px 28px; border-radius:12px; text-decoration:none; display:inline-flex; align-items:center; gap:8px; box-shadow:0 6px 18px rgba(22, 163, 74, 0.35); transition:all 0.25s ease;">
+            📋 Request Rice Export Quotation
+          </a>
+          <a href="https://wa.me/916006934322?text=Hello%20HR%20Enterprises,%20I%20would%20like%20to%20discuss%20our%20rice%20requirements%20with%20your%20team." target="_blank" rel="noopener noreferrer" style="background:#25d366; color:#ffffff; font-weight:800; font-size:14.5px; padding:14px 28px; border-radius:12px; text-decoration:none; display:inline-flex; align-items:center; gap:8px; box-shadow:0 6px 18px rgba(37, 211, 102, 0.3); transition:all 0.25s ease;">
+            💬 Chat on WhatsApp
+          </a>
+        </div>
+
+      </section>
+
       <!-- ========================================================================= -->
       <!-- 2. THE TRUST BRIDGE SECTION (RIGHT BELOW THE HERO)                        -->
       <!-- ========================================================================= -->
@@ -1579,6 +1708,7 @@
           </span>
         </div>
         <div class="subnav-links">
+          <button onclick="scrollToAbout()">ℹ️ About Us</button>
           <button onclick="scrollToAgroSection('agro-brochure')">Brochure Pages</button>
           <button onclick="scrollToAgroSection('agro-varieties')">Rice Varieties</button>
           <button onclick="scrollToAgroSection('agro-rfq-section')" style="background:#d97706; border-color:#f59e0b; color:#fff;">Request FOB/CIF Quote</button>
@@ -2121,6 +2251,7 @@
           <p style="font-size:12px; margin-top:2px;">💬 WhatsApp: <a href="https://wa.me/916006934322" target="_blank" style="color:#22c55e; text-decoration:none;">+91 60069 34322</a> / <a href="https://wa.me/919611339404" target="_blank" style="color:#22c55e; text-decoration:none;">+91 96113 39404</a></p>
         </div>
         <div class="footer-links">
+          <a onclick="scrollToAbout()" style="cursor:pointer;">About Us</a>
           <a onclick="openTab('gateway')" style="cursor:pointer;">Corporate Home</a>
           <a onclick="openTab('agro')" style="cursor:pointer;">Rice Export Division</a>
           <a onclick="openTab('gse')" style="cursor:pointer;">GSE Engineering Division</a>
@@ -2135,6 +2266,17 @@
 
   <!-- ================= JAVASCRIPT & ACTION LOGIC ================= -->
   <script>
+    // Smooth scroll to About Us section
+    function scrollToAbout() {
+      openTab('gateway');
+      setTimeout(function() {
+        const el = document.getElementById('about-us');
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 120);
+    }
+
     // Tab switching between Corporate Home, Agro, and GSE
     function openTab(tabName) {
       ['gateway', 'agro', 'gse'].forEach(function(t) {
